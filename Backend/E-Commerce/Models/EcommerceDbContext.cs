@@ -15,7 +15,7 @@ public partial class EcommerceDbContext : DbContext
     {
     }
 
-    public virtual DbSet<Cart> Carts { get; set; }
+    public virtual DbSet<Cart> Cartss { get; set; }
 
     public virtual DbSet<CartItem> CartItems { get; set; }
 
