@@ -1,23 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace E_Commerce.Models;
+namespace DAL.Data.Models;
 
-public partial class CartItem
+public partial class OrderItem
 {
-    public int CartItemId { get; set; }
+    public int OrderItemId { get; set; }
 
-    public int CartId { get; set; }
+    public int OrderId { get; set; }
 
     public int ProductId { get; set; }
 
     public int Quantity { get; set; }
 
-    public DateTime AddedAtUtc { get; set; }
+    public decimal UnitPrice { get; set; }
 
     public byte[] RowVersion { get; set; } = null!;
 
-    public virtual Cart Cart { get; set; } = null!;
+    public virtual Order Order { get; set; } = null!;
 
     public virtual Product Product { get; set; } = null!;
 }

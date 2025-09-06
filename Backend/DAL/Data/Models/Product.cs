@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace E_Commerce.Models;
+namespace DAL.Data.Models;
 
 public partial class Product
 {
@@ -13,9 +13,9 @@ public partial class Product
 
     public decimal Price { get; set; }
 
-    public int StockQuantity { get; set;}
+    public int StockQuantity { get; set; }
 
-    public int CategoryId { get; set;}
+    public int CategoryId { get; set; }
 
     public DateTime CreatedAtUtc { get; set; }
 

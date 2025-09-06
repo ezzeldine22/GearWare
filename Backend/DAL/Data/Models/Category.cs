@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace E_Commerce.Models;
+namespace DAL.Data.Models;
 
 public partial class Category
 {

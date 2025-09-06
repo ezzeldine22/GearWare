@@ -169,3 +169,40 @@ H:\EzzEldine\Computer Science\C# projects\E-Commerce\E-Commerce\obj\Debug\net8.0
 H:\EzzEldine\Computer Science\C# projects\E-Commerce\E-Commerce\obj\Debug\net8.0\E-Commerce.pdb
 H:\EzzEldine\Computer Science\C# projects\E-Commerce\E-Commerce\obj\Debug\net8.0\E-Commerce.genruntimeconfig.cache
 H:\EzzEldine\Computer Science\C# projects\E-Commerce\E-Commerce\obj\Debug\net8.0\ref\E-Commerce.dll
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.csproj.AssemblyReference.cache
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.GeneratedMSBuildEditorConfig.editorconfig
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.AssemblyInfoInputs.cache
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.AssemblyInfo.cs
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.csproj.CoreCompileInputs.cache
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.MvcApplicationPartsAssemblyInfo.cs
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.MvcApplicationPartsAssemblyInfo.cache
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.sourcelink.json
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.dll
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\refint\E-Commerce.dll
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.pdb
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\appsettings.Development.json
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\appsettings.json
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\E-Commerce.staticwebassets.endpoints.json
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\E-Commerce.exe
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\E-Commerce.deps.json
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\E-Commerce.runtimeconfig.json
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\E-Commerce.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\E-Commerce.pdb
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.OpenApi.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\scopedcss\bundle\E-Commerce.styles.css
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets.build.json
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets.development.json
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets\msbuild.E-Commerce.Microsoft.AspNetCore.StaticWebAssets.props
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets\msbuild.E-Commerce.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets\msbuild.build.E-Commerce.props
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.E-Commerce.props
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.E-Commerce.props
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets.pack.json
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.csproj.Up2Date
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.genruntimeconfig.cache
+F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\ref\E-Commerce.dll

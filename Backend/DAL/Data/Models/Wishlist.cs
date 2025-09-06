@@ -1,19 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace E_Commerce.Models;
+namespace DAL.Data.Models;
 
-public partial class Cart
+public partial class Wishlist
 {
-    public int CartId { get; set; }
+    public int WishlistId { get; set; }
 
     public int UserId { get; set; }
+
+    public int ProductId { get; set; }
 
     public DateTime CreatedAtUtc { get; set; }
 
     public byte[] RowVersion { get; set; } = null!;
 
-    public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
+    public virtual Product Product { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;
 }
