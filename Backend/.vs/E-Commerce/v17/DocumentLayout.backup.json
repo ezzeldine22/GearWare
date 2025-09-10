@@ -51,8 +51,7 @@
               "RelativeToolTip": "DAL\\Generic Repository\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T22:02:28.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T22:02:28.465Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "DAL\\Data\\EcommerceDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T22:02:17.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T22:02:17.834Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "DAL\\Generic Repository\\Repository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-06T22:02:15.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-06T22:02:15.245Z"
             }
           ]
         }
