@@ -1,2 +1,7 @@
-bin/
-obj/
+/bin/
+/obj/
+/.vs/
+*.vsidx
+*.db
+*.exe
+*.dll
