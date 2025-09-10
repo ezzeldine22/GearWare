@@ -34,6 +34,7 @@ namespace E_Commerce
 
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             builder.Services.AddScoped<IProductService, ProductService>();
+            //builder.Services.AddScoped<GetAllProductsDto>();
             //builder.Services.AddScoped<AddProductDto>();
             var app = builder.Build();
 

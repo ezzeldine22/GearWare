@@ -1,6 +1,26 @@
 [
   {
     "ContainingType": "E_Commerce.Controllers.ProductController",
+    "Method": "GetAllProducts",
+    "RelativePath": "Product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BLL.DTOs.ProductDtos.GetAllProductsDto, BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "E_Commerce.Controllers.ProductController",
     "Method": "AddProduct",
     "RelativePath": "Product",
     "HttpMethod": "POST",
@@ -10,6 +30,54 @@
       {
         "Name": "_addProductDto",
         "Type": "BLL.DTOs.ProductDtos.AddProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Commerce.Controllers.ProductController",
+    "Method": "EditProduct",
+    "RelativePath": "Product",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "editProductDto",
+        "Type": "BLL.DTOs.ProductDtos.EditProductDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Commerce.Controllers.ProductController",
+    "Method": "DeleteProduct",
+    "RelativePath": "Product/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Commerce.Controllers.ProductController",
+    "Method": "GetById",
+    "RelativePath": "Product/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

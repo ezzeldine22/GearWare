@@ -18,6 +18,6 @@ namespace BLL.DTOs.ProductDtos
 
         public int ProductStockQuantity { get; set; }
 
-        public string CategoryName { get; set; }
+  
     }
 }

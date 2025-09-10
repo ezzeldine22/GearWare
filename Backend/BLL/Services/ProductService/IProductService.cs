@@ -11,11 +11,11 @@ namespace BLL.Services.ProductService
     public interface IProductService
     {
         Task AddProductAsync(AddProductDto _addProductDto);
-        Task DeleteProductAsync();
-        Task EditProductAsync();
+        Task DeleteProductAsync(int id);
+        Task EditProductAsync(EditProductDto editProductDto);
 
-        Task GetProductByIdAsync();
-        Task<IEnumerable<Product>> GetAllProductsAsync(GetAllProductsDto productDto);
+        Task<GetProductByIdDto> GetProductByIdAsync(int Id);
+        IEnumerable<GetAllProductsDto> GetAllProducts();
 
     }
 }

@@ -10,10 +10,10 @@ namespace CleanArchitecture.Core.Interfaces
     public interface IRepository<TEntity> where TEntity : class
     {
         Task<TEntity> AddAsync(TEntity entity);
-        Task<TEntity> ReadAsync(string EntityID);
-        IQueryable<TEntity> ReadAllAsync();
+        Task<TEntity> ReadById(int RowID);
+        IQueryable<TEntity> ReadAll();
         void UpdateAsync(TEntity entity);
-        Task DeleteAsync(string entityID);
+        Task DeleteAsync(int entityID);
 
         Task<IEnumerable<TResult>> Select<TSource, TResult>(Expression<Func<TSource, TResult>> selector) where TSource : class;
         Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate);

@@ -22,11 +22,11 @@ namespace CleanArchitecture.Infrastructure.Persistence
             return entity;
         }
 
-        public async Task<TEntity> ReadAsync(string EntityID)
+        public async Task<TEntity> ReadById(int RowID)
         {
-            return await _entity.FindAsync(EntityID);
+            return await _entity.FindAsync(RowID);
         }
-        public IQueryable<TEntity> ReadAllAsync()
+        public IQueryable<TEntity> ReadAll()
         {
             return _entity.AsNoTracking();
         }
@@ -35,7 +35,7 @@ namespace CleanArchitecture.Infrastructure.Persistence
             _entity.Attach(entity);
         }
 
-        public async Task DeleteAsync(string entityID)
+        public async Task DeleteAsync(int entityID)
         {
             var oData = await _entity.FindAsync(entityID);
             _entity.Remove(oData);
@@ -44,7 +44,6 @@ namespace CleanArchitecture.Infrastructure.Persistence
         public int SaveChanges()
         {
             return _context.SaveChanges();
-
         }
 
         public async Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate) 
@@ -52,10 +51,7 @@ namespace CleanArchitecture.Infrastructure.Persistence
            return await _entity.FirstOrDefaultAsync(predicate) ;
         }
 
-        //public IQueryable<TResult> Select<TSource,TResult>(Expression<Func<TSource, TResult>> selector)
-        //{
-        //    return  _entity.Select(selector);
-        //}
+
 
         public async Task<IEnumerable<TResult>> Select<TSource, TResult>(
         Expression<Func<TSource, TResult>> selector
