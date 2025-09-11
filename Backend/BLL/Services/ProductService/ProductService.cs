@@ -50,15 +50,24 @@ namespace BLL.Services.ProductService
 
         }
 
+
+
+
         public Task DeleteProductAsync()
         {
             throw new NotImplementedException();
         }
 
+
+
+
         public Task EditProductAsync()
         {
             throw new NotImplementedException();
         }
+
+
+
 
         public async Task<IEnumerable<GetAllProductsDto>> GetAllProductsAsync(GetAllProductsDto productDto)
         {
@@ -70,8 +79,6 @@ namespace BLL.Services.ProductService
                 throw new CustomException(new List<string> { "No Products To Show !!!" });
             }
             
-            var Filterd = AllCategories.Where(cat=>cat.CategoryId == )
-
 
             var AllProductsDto = AllProducts.Select(p => new GetAllProductsDto
             {
@@ -79,18 +86,17 @@ namespace BLL.Services.ProductService
                 ProductPrice = p.Price,
                 ProductDescription = p.Description,
                 ProductStockQuantity = p.StockQuantity,
-                //ProductCategory = _categoryRepo.Select()
+                ProductCategory = p.Category.Name
                 
                 
 
             }).ToList();
 
-          
-               
-
            return AllProductsDto;
 
         }
+
+
 
         public Task GetProductByIdAsync()
         {

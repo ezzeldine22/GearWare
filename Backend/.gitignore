@@ -5,3 +5,13 @@
 *.db
 *.exe
 *.dll
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+*.dbmdl
+*.bak
+*.backup.json
+*.swp
+*.DS_Store

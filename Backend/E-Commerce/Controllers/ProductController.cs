@@ -1,10 +1,7 @@
 ﻿using BLL.DTOs.ProductDtos;
 using BLL.Exceptions;
 using BLL.Services.ProductService;
-using DAL.Data;
-using DAL.Data.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace E_Commerce.Controllers
 {
@@ -24,23 +21,23 @@ namespace E_Commerce.Controllers
 
         [HttpGet("")]
        
-        public async Task<IEnumerable<Product>> GetAllProducts(GetAllProductsDto productDto)
-        {
-            try
-            {
-                await productService.GetAllProductsAsync(productDto);
-                return Ok(Result);
+        //public async Task<IEnumerable<Product>> GetAllProducts(GetAllProductsDto productDto)
+        //{
+        //    try
+        //    {
+        //        await productService.GetAllProductsAsync(productDto);
+        //        return Ok(Result);
 
-            }
-            catch (CustomException ex)
-            {
-                return BadRequest(new
-                {
-                    ex.Errors
-                });
-            }
+        //    }
+        //    catch (CustomException ex)
+        //    {
+        //        return BadRequest(new
+        //        {
+        //            ex.Errors
+        //        });
+        //    }
 
-        }
+        //}
         
         [HttpPost("")]
         
@@ -63,6 +60,5 @@ namespace E_Commerce.Controllers
                 });
             }
         }
-    
     }
 }
