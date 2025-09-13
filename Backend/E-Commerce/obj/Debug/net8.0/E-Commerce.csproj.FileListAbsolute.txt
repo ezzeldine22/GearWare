@@ -325,3 +325,4 @@ F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\BLL.dll
 F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\DAL.dll
 F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\BLL.pdb
 F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\DAL.pdb
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\E-Commerce.MvcApplicationPartsAssemblyInfo.cs
