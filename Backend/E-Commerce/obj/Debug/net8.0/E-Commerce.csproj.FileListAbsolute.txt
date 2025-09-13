@@ -283,3 +283,45 @@ H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\DAL.dll
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\BLL.pdb
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\DAL.pdb
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Azure.Core.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Azure.Identity.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\System.Drawing.Common.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\System.Memory.Data.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\System.Runtime.Caching.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\System.Security.Permissions.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\System.Windows.Extensions.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\BLL.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\DAL.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\BLL.pdb
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\DAL.pdb

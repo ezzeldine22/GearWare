@@ -1,5 +1,7 @@
 using BLL.DTOs.ProductDtos;
-using BLL.Services.ProductService;
+using BLL.Services.CategoryService;
+using BLL.Services.CategoryService.CategoryService;
+using BLL.Services.ProductServices;
 using CleanArchitecture.Core.Interfaces;
 using CleanArchitecture.Infrastructure.Persistence;
 using DAL.Data;
@@ -34,6 +36,7 @@ namespace E_Commerce
 
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<ICategoryServices, CategoryServices>();
             //builder.Services.AddScoped<GetAllProductsDto>();
             //builder.Services.AddScoped<AddProductDto>();
             var app = builder.Build();

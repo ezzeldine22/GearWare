@@ -51,6 +51,11 @@ namespace CleanArchitecture.Infrastructure.Persistence
            return await _entity.FirstOrDefaultAsync(predicate) ;
         }
 
+        public IEnumerable<TEntity> Where(Expression<Func<TEntity, bool>> predicate)
+        {
+            return _entity.Where(predicate);
+        }
+
 
 
         public async Task<IEnumerable<TResult>> Select<TSource, TResult>(

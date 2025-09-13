@@ -13,3 +13,18 @@ H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.pdb
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\ref\DAL.dll
+F:\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.deps.json
+F:\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.runtimeconfig.json
+F:\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.dll
+F:\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.pdb
+F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.sourcelink.json
+F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.dll
+F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\refint\DAL.dll
+F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.pdb
+F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
+F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\ref\DAL.dll

@@ -1,6 +1,6 @@
 ﻿using BLL.DTOs.ProductDtos;
 using BLL.Exceptions;
-using BLL.Services.ProductService;
+using BLL.Services.ProductServices;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_Commerce.Controllers
@@ -31,7 +31,7 @@ namespace E_Commerce.Controllers
                 return BadRequest(ex.Errors);
             }
 
-        //}
+        }
         
         [HttpPost("")]
         
