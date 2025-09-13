@@ -20,8 +20,6 @@ namespace BLL.DTOs.ProductDtos
         public decimal ProductPrice { get; set; }
 
         public int ProductStockQuantity { get; set; }
-
-
-
+    
     }
 }
