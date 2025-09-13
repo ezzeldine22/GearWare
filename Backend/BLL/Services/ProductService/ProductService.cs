@@ -17,12 +17,11 @@ namespace BLL.Services.ProductService
         private readonly IRepository<Product> _ProductRepo;
         private readonly IRepository<Category> _categoryRepo;
 
-        public ProductService(IRepository<Product> ProductRepo, IRepository<Category> CategoryRepo)
+        public ProductService(IRepository<Product> ProductRepo , IRepository<Category> CategoryRepo)
         {
             _ProductRepo = ProductRepo;
             _categoryRepo = CategoryRepo;
         }
-
    
         public async Task AddProductAsync(AddProductDto _addProductDto)
         {
@@ -50,57 +49,75 @@ namespace BLL.Services.ProductService
 
         }
 
-
-
-
-        public Task DeleteProductAsync()
+        public async Task DeleteProductAsync(int Id)
         {
-            throw new NotImplementedException();
+
+            await _ProductRepo.DeleteAsync(Id);
+            _ProductRepo?.SaveChanges();
+
         }
 
-
-
-
-        public Task EditProductAsync()
+        public async Task EditProductAsync(EditProductDto editProductDto)
         {
-            throw new NotImplementedException();
+            var EditedProduct = await _ProductRepo.ReadById(editProductDto.ProductId);
+            var Category = await _categoryRepo.FirstOrDefaultAsync(c => c.Name == editProductDto.ProductCategoryName);
+
+            EditedProduct.Name = editProductDto.ProductName;
+            EditedProduct.Price = editProductDto.ProductPrice;
+            EditedProduct.Description= editProductDto.ProductDescription;
+            EditedProduct.CategoryId = Category.CategoryId;
+            EditedProduct.StockQuantity = editProductDto.ProductStockQuantity;
+            _ProductRepo.UpdateAsync(EditedProduct);
+            _ProductRepo.SaveChanges();
         }
 
-
-
-
-        public async Task<IEnumerable<GetAllProductsDto>> GetAllProductsAsync(GetAllProductsDto productDto)
+        public IEnumerable<GetAllProductsDto> GetAllProducts()
         {
-            var AllProducts = _ProductRepo.ReadAllAsync();
-            var AllCategories = _categoryRepo.ReadAllAsync();
-            
+            var AllProducts = _ProductRepo.ReadAll();
+  
             if (AllProducts == null)
             {
                 throw new CustomException(new List<string> { "No Products To Show !!!" });
             }
-            
 
             var AllProductsDto = AllProducts.Select(p => new GetAllProductsDto
             {
                 ProductName = p.Name,
+                Id = p.ProductId,
                 ProductPrice = p.Price,
                 ProductDescription = p.Description,
                 ProductStockQuantity = p.StockQuantity,
-                ProductCategory = p.Category.Name
-                
-                
+                ProductCategory = p.Category.Name,
 
             }).ToList();
-
-           return AllProductsDto;
+    
+           return  AllProductsDto;
 
         }
 
-
-
-        public Task GetProductByIdAsync()
+        public async Task<GetProductByIdDto> GetProductByIdAsync(int Id)
         {
-            throw new NotImplementedException();
+            var ProductById = await _ProductRepo.ReadById(Id);
+
+            if (ProductById == null)
+            {
+                throw new CustomException(new List<string> { "No Products To Show !!!" });
+            }
+
+            var Category = await _categoryRepo.FirstOrDefaultAsync(c => c.CategoryId == ProductById.CategoryId);
+            var ProductByIdDto = new GetProductByIdDto
+            {
+                ProductName = ProductById.Name,
+                ProductPrice = ProductById.Price,
+                ProductDescription = ProductById.Description,
+                ProductStockQuantity = ProductById.StockQuantity,
+                ProductCategory = Category.Name,
+            };
+
+            return ProductByIdDto;
         }
+     
+
+        
     }
 }

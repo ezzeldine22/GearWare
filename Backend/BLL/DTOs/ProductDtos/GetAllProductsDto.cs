@@ -9,7 +9,8 @@ namespace BLL.DTOs.ProductDtos
 {
     public class GetAllProductsDto
     {
-       
+
+        public int Id { get; set; }
         public string ProductName { get; set; } 
 
         public string ProductDescription { get; set; }

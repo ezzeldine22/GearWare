@@ -11,31 +11,25 @@ namespace E_Commerce.Controllers
     {
 
         private readonly IProductService productService;
-
+   
 
         public ProductController(IProductService ProductService)
         {
             productService = ProductService;
-
+       
         }
 
         [HttpGet("")]
-       
-        //public async Task<IEnumerable<Product>> GetAllProducts(GetAllProductsDto productDto)
-        //{
-        //    try
-        //    {
-        //        await productService.GetAllProductsAsync(productDto);
-        //        return Ok(Result);
-
-        //    }
-        //    catch (CustomException ex)
-        //    {
-        //        return BadRequest(new
-        //        {
-        //            ex.Errors
-        //        });
-        //    }
+        public ActionResult<IEnumerable<GetAllProductsDto>> GetAllProducts()
+        {
+            try
+            {
+                return Ok(productService.GetAllProducts());
+            }
+            catch (CustomException ex)
+            {
+                return BadRequest(ex.Errors);
+            }
 
         //}
         
@@ -59,6 +53,28 @@ namespace E_Commerce.Controllers
                     ex.Errors
                 });
             }
+        }
+
+
+        [HttpDelete("{Id}")]
+        public async Task<ActionResult> DeleteProduct(int Id)
+        {
+            await productService.DeleteProductAsync(Id);
+            return Ok();
+        }
+
+        [HttpGet("{Id}")]
+        public async Task<ActionResult> GetById(int Id)
+        {
+            var product = await productService.GetProductByIdAsync(Id);
+            return Ok(product);
+        }
+
+        [HttpPut("")]
+        public async Task<ActionResult> EditProduct(EditProductDto editProductDto)
+        {
+            await productService.EditProductAsync(editProductDto);
+            return Ok();
         }
     }
 }
