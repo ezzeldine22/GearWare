@@ -10,7 +10,7 @@ namespace BLL.Services.OrderService
 {
     public interface IOrderService
     {
-        IEnumerable<GetAllOrderItemsDto> GetAllOrderItems();
-        //IEnumerable<GetAllOrderItemsDto> GetAllOrder();
+        IEnumerable<GetAllOrderItemsDto> GetAllOrderItems(int orderId);
+        IEnumerable<GetAllOrdersDto> GetAllOrders(string ClientId);
     }
 }

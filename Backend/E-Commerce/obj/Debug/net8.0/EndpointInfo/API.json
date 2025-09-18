@@ -356,6 +356,16 @@
         "tags": [
           "OrderItem"
         ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -381,6 +391,53 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/GetAllOrderItemsDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/OrderItem/Get AllOrders": {
+      "get": {
+        "tags": [
+          "OrderItem"
+        ],
+        "parameters": [
+          {
+            "name": "ClientId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllOrdersDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllOrdersDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllOrdersDto"
                   }
                 }
               }
@@ -693,6 +750,32 @@
             "nullable": true
           },
           "orderItemPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "orderItemQuantity": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllOrdersDto": {
+        "type": "object",
+        "properties": {
+          "orderId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "total": {
             "type": "number",
             "format": "double"
           }

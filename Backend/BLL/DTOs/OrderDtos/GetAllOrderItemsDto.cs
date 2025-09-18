@@ -11,5 +11,7 @@ namespace BLL.DTOs.OrderDtos
         public string OrderItemDescription { get; set; }
 
         public decimal OrderItemPrice { get; set; }
+
+        public decimal OrderItemQuantity { get; set; }
     }
 }

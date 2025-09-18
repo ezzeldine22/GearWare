@@ -12,7 +12,7 @@ public partial class Wishlist
     public int ProductId { get; set; }
 
     public DateTime CreatedAtUtc { get; set; }
-
+    
     public byte[] RowVersion { get; set; } = null!;
 
     public virtual Product Product { get; set; } = null!;

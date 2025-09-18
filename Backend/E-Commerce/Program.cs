@@ -52,8 +52,6 @@ namespace E_Commerce
             .AddEntityFrameworkStores<EcommerceDbContext>();
             
 
-
-
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = "jwt";

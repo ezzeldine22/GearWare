@@ -45,17 +45,11 @@ namespace BLL.Managers.AccountManager
                     claims.Add(new Claim(ClaimTypes.Role, "Client"));
                     claims.Add(new Claim(ClaimTypes.Name, User.UserName));
                     claims.Add(new Claim(ClaimTypes.NameIdentifier, User.Id));
-                    
-
 
                     await _userManager.AddClaimsAsync(User, claims);
-                }
-               
-            }
-           
+                }  
+            }  
         }
-
-
         public async Task<ValidloginDto> Login(LoginDto logInDto)
         {
 
