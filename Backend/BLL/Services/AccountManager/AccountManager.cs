@@ -18,11 +18,11 @@ namespace BLL.Managers.AccountManager
 {
     public class AccountManager : IAccountManager
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly UserManager<User> _userManager;
         private readonly IConfiguration _configuration;
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AccountManager(UserManager<ApplicationUser> userManager,
+        public AccountManager(UserManager<User> userManager,
                               IConfiguration configuration,
                               RoleManager<IdentityRole> roleManager)
         {
@@ -31,115 +31,104 @@ namespace BLL.Managers.AccountManager
             _roleManager = roleManager;
         }
 
-        public async Task<IList<Claim>> AssignRoleToUser(ApplicationUser User)
+        public async Task<IList<Claim>> AssignRoleToUser(User User)
         {
-            var user = await _userManager.FindByIdAsync(User.Id);
-            //var role = await _roleManager.FindByIdAsync(assignRole.RoleId);
 
-            if(user != null)
+            if (User != null)
             {
-                var result = await _userManager.AddToRoleAsync(user, "User");
+                var result = await _userManager.AddToRoleAsync(User, "User");
 
                 if (result.Succeeded)
                 {
                     List<Claim> claims = new List<Claim>();
 
                     claims.Add(new Claim(ClaimTypes.Role, "User"));
-                    claims.Add(new Claim(ClaimTypes.Name, user.UserName));
+                    claims.Add(new Claim(ClaimTypes.Name, User.UserName));
+                    claims.Add(new Claim(ClaimTypes.NameIdentifier, User.Id));
 
-                    await _userManager.AddClaimsAsync(user, claims);
+
+                    await _userManager.AddClaimsAsync(User, claims);
                 }
-                //return "Save Fail";
+               
             }
-            var claim = await _userManager.GetClaimsAsync(user);
+            var claim = await _userManager.GetClaimsAsync(User);
             return claim;
         }
 
 
-        public async Task<ValidLoginDto> Login(LoginDto logInDto)
-        {
-            var user = await _userManager.FindByEmailAsync(logInDto.emailOrPhone);
+        //public async Task<ValidLoginDto> Login(LoginDto logInDto)
+        //{
+        //    var user = await _userManager.FindByEmailAsync(logInDto.emailOrPhone);
 
-            if (user == null)
-            {
-                user = _userManager.Users.FirstOrDefault(a => a.PhoneNumber == logInDto.emailOrPhone); ;
-                if (user == null)
-                {
-                    throw new CustomException(new List<string> { "لا يوجد حساب مرتبط بالبريد الإلكتروني" });
-                }
-            }
+        //    if (user == null)
+        //    {
+        //        user = _userManager.Users.FirstOrDefault(a => a.PhoneNumber == logInDto.emailOrPhone); ;
+        //        if (user == null)
+        //        {
+        //            throw new CustomException(new List<string> { "لا يوجد حساب مرتبط بالبريد الإلكتروني" });
+        //        }
+        //    }
 
-            var check = await _userManager.CheckPasswordAsync(user, logInDto.password);
+        //    var check = await _userManager.CheckPasswordAsync(user, logInDto.password);
 
-            if (check == false)
-            {
-                throw new CustomException(new List<string> { "برجاء التأكد من البيانات والمحاولة مرة أخرى" });
-            }
+        //    if (check == false)
+        //    {
+        //        throw new CustomException(new List<string> { "برجاء التأكد من البيانات والمحاولة مرة أخرى" });
+        //    }
 
-            var role = await _userManager.GetRolesAsync(user);
-            var claims = await _userManager.GetClaimsAsync(user);
-            return new ValidLoginDto
-            {
-                token = GenerateToken(claims),
-                email = user.Email,
-                firstName = user.Fname,
-                roles = role,
-                isVerified = false
-            };
-        }
+        //    var role = await _userManager.GetRolesAsync(user);
+        //    var claims = await _userManager.GetClaimsAsync(user);
+        //    return new ValidLoginDto
+        //    {
+        //        token = GenerateToken(claims),
+        //        email = user.Email,
+        //        firstName = user.Fname,
+        //        roles = role,
+        //        isVerified = false
+        //    };
+        //}
 
         public async Task<string> Register(RegisterDto registerDto)
         {
-            var checkphone = await _userManager.Users.FirstOrDefaultAsync(a => a.PhoneNumber == registerDto.phone);
-
-            if (checkphone != null)
+            var CheckEmailRedundncy = await _userManager.Users.AnyAsync(u => u.Email == registerDto.email);
+           
+            if (CheckEmailRedundncy)
             {
-                throw new CustomException(new List<string> { "رقم الهاتف مسجل بالفعل لحساب آخر!" });
+                throw new CustomException(new List<string> { "The Email Already Exists !!!" });
             }
 
-            var checkEmail = await _userManager.FindByEmailAsync(registerDto.email);
+            var CheckPhoneRedundncy = await _userManager.Users.AnyAsync(u => u.PhoneNumber == registerDto.phone);
 
-            if(checkEmail != null)
+            if (CheckPhoneRedundncy)
             {
-                throw new CustomException(new List<string> { $"Email '{registerDto.email}' is already taken." });
+                throw new CustomException(new List<string> { "The Phone Already Exists !!!" });
             }
-            //if(registerDto.password.Length < 6)
-            //{
-            //    throw new CustomException(new List<string> { "Passwords must be at least 6 characters." });
-            //}
 
-            ApplicationUser user = new ApplicationUser
+      
+            
+            var newUser = new User
             {
-                Fname = registerDto.firstName,
-                Lname = registerDto.lastName,
-                UserName = registerDto.firstName + "_" + registerDto.lastName,
-                Gender = registerDto.gender,
-                CountryId = registerDto.countryId,
+                Name = registerDto.Name,
                 Email = registerDto.email,
                 PhoneNumber = registerDto.phone,
-                Birthdate = registerDto.birthDate,
-                EduLevel = registerDto.eduLevel,
+                gender = registerDto.gender,
+                UserName = registerDto.Name+"123",
             };
-            
-            var result = await _userManager.CreateAsync(user, registerDto.password);
 
-            //if (!result.Succeeded)
-            //{
-            //    var errors = result.Errors.Select(e => e.Description).ToList();
-            //    throw new CustomException(errors);
-            //}
+             var hashedPass = await _userManager.CreateAsync(newUser,registerDto.password);
 
-            if (result.Succeeded)
-            {
-                var createdUser = await _userManager.FindByEmailAsync(registerDto.email);
 
-                var claim = await AssignRoleToUser(createdUser);
-                
-                return GenerateToken(claim);
-            }
-            return null;
+             if (hashedPass.Succeeded)
+             {
+                return "No Issues Found";
+             }
+             var Errors = hashedPass.Errors.ToString();
+             
+             return Errors;
+
         }
 
+        
         private string GenerateToken(IList<Claim> claims)
         {
             var secretKey = _configuration.GetSection("SecretKey").Value;

@@ -1,18 +1,3 @@
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.sourcelink.json
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.deps.json
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.runtimeconfig.json
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.dll
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.pdb
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.dll
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\refint\DAL.dll
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.pdb
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\ref\DAL.dll
 F:\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.deps.json
 F:\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.runtimeconfig.json
 F:\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.dll
@@ -28,3 +13,18 @@ F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\refint\DAL.dll
 F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.pdb
 F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
 F:\E-Commerce\Backend\DAL\obj\Debug\net8.0\ref\DAL.dll
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.deps.json
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.runtimeconfig.json
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.dll
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\bin\Debug\net8.0\DAL.pdb
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.csproj.AssemblyReference.cache
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.AssemblyInfoInputs.cache
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.AssemblyInfo.cs
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.csproj.CoreCompileInputs.cache
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.sourcelink.json
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.dll
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\refint\DAL.dll
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.pdb
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\DAL\obj\Debug\net8.0\ref\DAL.dll

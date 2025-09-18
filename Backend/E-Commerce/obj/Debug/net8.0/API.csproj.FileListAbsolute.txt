@@ -155,3 +155,5 @@ F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\refint\API.dll
 F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\API.pdb
 F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\API.genruntimeconfig.cache
 F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\ref\API.dll
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

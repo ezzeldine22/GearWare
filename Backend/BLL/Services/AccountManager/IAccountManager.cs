@@ -11,11 +11,10 @@ namespace BLL.Managers.AccountManager
 {
     public interface IAccountManager
     {
-        Task<ValidLoginDto> Login(LoginDto loginDto);
+        //Task<ValidLoginDto> Login(LoginDto loginDto);
         Task<string> Register(RegisterDto loginDto);
-        //Task<List<UserReadDto>> GetAllUser();
-        //Task<string> CreateRole(RoleAddDto AddRole);
-        Task<IList<Claim>> AssignRoleToUser(ApplicationUser User);
-        //Task<string> GetRoles(RegisterDto loginDto);
+     
+        Task<IList<Claim>> AssignRoleToUser(User User);
+        
     }
 }

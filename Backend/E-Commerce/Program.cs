@@ -1,4 +1,5 @@
 using BLL.DTOs.ProductDtos;
+using BLL.Managers.AccountManager;
 using BLL.Services.CartServices;
 using BLL.Services.CategoryService;
 using BLL.Services.CategoryService.CategoryService;
@@ -8,7 +9,10 @@ using CleanArchitecture.Core.Interfaces;
 using CleanArchitecture.Infrastructure.Persistence;
 using DAL.Data;
 using DAL.Data.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace E_Commerce
 {
@@ -31,9 +35,7 @@ namespace E_Commerce
             Option.UseSqlServer(builder.Configuration.GetConnectionString("EDB"))
             );
 
-            //builder.Services.AddDbContext<EcommerceDbContext>(Option =>
-            //Option.UseSqlServer("Server=.;Database=ECommerceDB;Trusted_Connection=True;TrustServerCertificate=True;"));
-
+            //------------------------------------------------------//
 
 
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
@@ -41,9 +43,44 @@ namespace E_Commerce
             builder.Services.AddScoped<ICategoryServices, CategoryServices>();
             builder.Services.AddScoped<ICartService ,CartService>();
             builder.Services.AddScoped<IOrderService ,OrderService>();
-            //builder.Services.AddScoped<GetAllProductsDto>();
-            //builder.Services.AddScoped<AddProductDto>();
+            builder.Services.AddScoped<IAccountManager, AccountManager>();
+
+            //------------------------------------------------------//
+
+            builder.Services.AddIdentity<User, IdentityRole>()
+             .AddEntityFrameworkStores<EcommerceDbContext>();
+
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = "jwt";
+                options.DefaultChallengeScheme = "jwt";
+            }).AddJwtBearer("jwt", option =>
+            {
+                var SecretKey = builder.Configuration.GetSection("SecretKey").Value;
+                var SecretKeyByte = Encoding.UTF8.GetBytes(SecretKey);
+                SecurityKey securityKey = new SymmetricSecurityKey(SecretKeyByte);
+
+                option.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                {
+                    IssuerSigningKey = securityKey,
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
+
+
+            builder.Services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+
+            });
+
             var app = builder.Build();
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

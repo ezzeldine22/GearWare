@@ -11,6 +11,6 @@ namespace BLL.Services.OrderService
     public interface IOrderService
     {
         IEnumerable<GetAllOrderItemsDto> GetAllOrderItems();
-        IEnumerable<GetAllOrderItemsDto> GetAllOrder();
+        //IEnumerable<GetAllOrderItemsDto> GetAllOrder();
     }
 }

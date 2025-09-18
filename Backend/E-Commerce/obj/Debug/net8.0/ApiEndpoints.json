@@ -264,5 +264,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BLL.Services.AccountManager.RegisterController",
+    "Method": "Register",
+    "RelativePath": "Register/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "BLL.DTOs.AccountDTOs.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

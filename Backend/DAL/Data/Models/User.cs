@@ -1,20 +1,17 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 
 namespace DAL.Data.Models;
 
-public partial class User
+public partial class User : IdentityUser
 {
-    public int UserId { get; set; }
-
     public string Name { get; set; } = null!;
+
 
     public string Email { get; set; } = null!;
 
-    public byte[] PasswordHash { get; set; } = null!;
-
-    public string Role { get; set; } = null!;
-
+    public string gender { get; set; }
     public DateTime CreatedAtUtc { get; set; }
 
     public bool IsActive { get; set; }

@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using DAL.Data.Models;
+﻿using DAL.Data.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
 
 namespace DAL.Data;
 
-public partial class EcommerceDbContext : DbContext
+public partial class EcommerceDbContext : IdentityDbContext<User>
 {
     public EcommerceDbContext()
     {
@@ -16,31 +18,25 @@ public partial class EcommerceDbContext : DbContext
     {
     }
 
-    public virtual DbSet<Cart> Carts { get; set; }
+    public DbSet<Cart> Carts { get; set; }
+    public DbSet<CartItem> CartItems { get; set; }
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<OrderItem> OrderItems { get; set; }
+    public DbSet<Payment> Payments { get; set; }
+    public DbSet<Product> Products { get; set; }
+    public DbSet<Review> Reviews { get; set; }
+    public DbSet<Wishlist> Wishlists { get; set; }
 
-    public virtual DbSet<CartItem> CartItems { get; set; }
-
-    public virtual DbSet<Category> Categories { get; set; }
-
-    public virtual DbSet<Order> Orders { get; set; }
-
-    public virtual DbSet<OrderItem> OrderItems { get; set; }
-
-    public virtual DbSet<Payment> Payments { get; set; }
-
-    public virtual DbSet<Product> Products { get; set; }
-
-    public virtual DbSet<Review> Reviews { get; set; }
-
-    public virtual DbSet<User> Users { get; set; }
-
-    public virtual DbSet<Wishlist> Wishlists { get; set; }
+    
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Server=.;Database=ECommerceDB;Trusted_Connection=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+
+        base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<Cart>(entity =>
         {
             entity.HasKey(e => e.CartId).HasName("PK__Carts__51BCD7B703B41407");
@@ -230,7 +226,7 @@ public partial class EcommerceDbContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CC4CD6021ED9");
+            entity.HasKey(e => e.Id).HasName("PK__Users__1788CC4CD6021ED9");
 
             entity.HasIndex(e => e.Email, "UQ__Users__A9D10534A281DF16").IsUnique();
 
@@ -244,7 +240,7 @@ public partial class EcommerceDbContext : DbContext
             entity.Property(e => e.IsActive).HasDefaultValue(true);
             entity.Property(e => e.Name).HasMaxLength(100);
             entity.Property(e => e.PasswordHash).HasMaxLength(256);
-            entity.Property(e => e.Role).HasMaxLength(20);
+
             entity.Property(e => e.RowVersion)
                 .IsRowVersion()
                 .IsConcurrencyToken();
@@ -271,6 +267,8 @@ public partial class EcommerceDbContext : DbContext
                 .HasForeignKey(d => d.UserId)
                 .HasConstraintName("FK_Wishlists_Users");
         });
+
+   
 
         OnModelCreatingPartial(modelBuilder);
     }
