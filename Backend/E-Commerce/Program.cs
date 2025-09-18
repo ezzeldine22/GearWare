@@ -12,6 +12,7 @@ using DAL.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Text;
 
 namespace E_Commerce
@@ -47,8 +48,10 @@ namespace E_Commerce
 
             //------------------------------------------------------//
 
-            builder.Services.AddIdentity<User, IdentityRole>()
-             .AddEntityFrameworkStores<EcommerceDbContext>();
+            builder.Services.AddIdentity<User, IdentityRole>(options => { })
+            .AddEntityFrameworkStores<EcommerceDbContext>();
+            
+
 
 
             builder.Services.AddAuthentication(options =>

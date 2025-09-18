@@ -31,62 +31,74 @@ namespace BLL.Managers.AccountManager
             _roleManager = roleManager;
         }
 
-        public async Task<IList<Claim>> AssignRoleToUser(User User)
+        private async Task AssignRoleToUser(User User)
         {
 
             if (User != null)
             {
-                var result = await _userManager.AddToRoleAsync(User, "User");
+                var result = await _userManager.AddToRoleAsync(User, "Client");
 
                 if (result.Succeeded)
                 {
                     List<Claim> claims = new List<Claim>();
 
-                    claims.Add(new Claim(ClaimTypes.Role, "User"));
+                    claims.Add(new Claim(ClaimTypes.Role, "Client"));
                     claims.Add(new Claim(ClaimTypes.Name, User.UserName));
                     claims.Add(new Claim(ClaimTypes.NameIdentifier, User.Id));
+                    
 
 
                     await _userManager.AddClaimsAsync(User, claims);
                 }
                
             }
-            var claim = await _userManager.GetClaimsAsync(User);
-            return claim;
+           
         }
 
 
-        //public async Task<ValidLoginDto> Login(LoginDto logInDto)
-        //{
-        //    var user = await _userManager.FindByEmailAsync(logInDto.emailOrPhone);
+        public async Task<ValidloginDto> Login(LoginDto logInDto)
+        {
 
-        //    if (user == null)
-        //    {
-        //        user = _userManager.Users.FirstOrDefault(a => a.PhoneNumber == logInDto.emailOrPhone); ;
-        //        if (user == null)
-        //        {
-        //            throw new CustomException(new List<string> { "لا يوجد حساب مرتبط بالبريد الإلكتروني" });
-        //        }
-        //    }
+            var EnteredVlaue = logInDto.emailOrPhone;
 
-        //    var check = await _userManager.CheckPasswordAsync(user, logInDto.password);
+            bool check;
+            User? user;
+            if (EnteredVlaue.Contains("@"))
+            {
+                //user = await _userManager.Users.FirstOrDefaultAsync(u => u.Email == EnteredVlaue);
+                user = await _userManager.FindByEmailAsync(EnteredVlaue);
+                if (user == null)
+                {
+                    throw new CustomException(new List<string> { "لا يوجد حساب مرتبط بالبريد الإلكتروني" });
+                }
+              
+            }
+            else
+            {
+                 user = await _userManager.Users.FirstOrDefaultAsync(u => u.PhoneNumber == EnteredVlaue);
+                if (user == null)
+                {
+                    throw new CustomException(new List<string> { "لا يوجد حساب مرتبط بالهاتف" });
+                }
+               
+            }
 
-        //    if (check == false)
-        //    {
-        //        throw new CustomException(new List<string> { "برجاء التأكد من البيانات والمحاولة مرة أخرى" });
-        //    }
+            check = await _userManager.CheckPasswordAsync(user, logInDto.password);
+            if (!check)
+            {
+                throw new CustomException(new List<string> { "برجاء التأكد من البيانات والمحاولة مرة أخرى" });
+            }
 
-        //    var role = await _userManager.GetRolesAsync(user);
-        //    var claims = await _userManager.GetClaimsAsync(user);
-        //    return new ValidLoginDto
-        //    {
-        //        token = GenerateToken(claims),
-        //        email = user.Email,
-        //        firstName = user.Fname,
-        //        roles = role,
-        //        isVerified = false
-        //    };
-        //}
+            var role = await _userManager.GetRolesAsync(user);
+            var claims = await _userManager.GetClaimsAsync(user);
+            return new ValidloginDto
+            {
+                token = GenerateToken(claims),
+                email = user.Email,
+                Name = user.Name,
+                roles = role,
+            };
+        }
 
         public async Task<string> Register(RegisterDto registerDto)
         {
@@ -103,8 +115,6 @@ namespace BLL.Managers.AccountManager
             {
                 throw new CustomException(new List<string> { "The Phone Already Exists !!!" });
             }
-
-      
             
             var newUser = new User
             {
@@ -112,14 +122,15 @@ namespace BLL.Managers.AccountManager
                 Email = registerDto.email,
                 PhoneNumber = registerDto.phone,
                 gender = registerDto.gender,
-                UserName = registerDto.Name+"123",
+                UserName = registerDto.email.Split('@')[0],
             };
 
+            
              var hashedPass = await _userManager.CreateAsync(newUser,registerDto.password);
 
-
              if (hashedPass.Succeeded)
-             {
+             {  
+                await AssignRoleToUser(newUser);
                 return "No Issues Found";
              }
              var Errors = hashedPass.Errors.ToString();
@@ -147,5 +158,7 @@ namespace BLL.Managers.AccountManager
             var token = handler.WriteToken(jwtSecurityToken);
             return token;
         }
+
+       
     }
 }

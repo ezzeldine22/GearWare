@@ -14,11 +14,11 @@ namespace BLL.Services.AccountManager
 {
     [ApiController]
     [Route("[controller]")]
-    public class RegisterController : ControllerBase
+    public class AccountController : ControllerBase
     {
         private readonly IAccountManager _accountManager;
 
-        public RegisterController(IAccountManager accountManager)
+        public AccountController(IAccountManager accountManager)
         {
             _accountManager = accountManager;
         }
@@ -33,6 +33,23 @@ namespace BLL.Services.AccountManager
             {
                 await _accountManager.Register(registerDto);
                 return Ok();
+            }
+            catch (CustomException ex)
+            {
+                return BadRequest(new
+                {
+                    ex.Errors
+                });
+            }
+        }
+
+        [HttpPost("Login")]
+        public async Task<ActionResult<ValidloginDto>> Login(LoginDto LoginDto)
+        {
+            try
+            {
+               var LoginResults = await _accountManager.Login(LoginDto);
+                return Ok(LoginResults);
             }
             catch (CustomException ex)
             {

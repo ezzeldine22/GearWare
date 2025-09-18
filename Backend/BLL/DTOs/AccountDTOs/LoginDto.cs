@@ -15,7 +15,7 @@ namespace BLL.DTOs.AccountDTOs
         [Required(ErrorMessage = "The Password field is required.")]
         public string password { get; set; }
 
-        [Required(ErrorMessage = "The Model field is required.")]
-        public bool remember { get; set; }
+        //[Required(ErrorMessage = "The Model field is required.")]
+        //public bool remember { get; set; }
     }
 }

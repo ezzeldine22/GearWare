@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BLL.DTOs.AccountDTOs
 {
-    public class ValidLoginDto
+    public class ValidloginDto
     {
         public string token { get; set; }
-        public  string email { get; set; }
-        public  string firstName { get; set; }
-        public  IList<string> roles { get; set; }
-        public bool isVerified { get; set; }
+        public string email { get; set; }
+        public string Name { get; set; }
+        public IList<string> roles { get; set; }
+        //public bool isVerified { get; set; }
     }
 }

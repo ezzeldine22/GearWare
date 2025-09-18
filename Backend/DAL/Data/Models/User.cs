@@ -8,10 +8,8 @@ public partial class User : IdentityUser
 {
     public string Name { get; set; } = null!;
 
-
-    public string Email { get; set; } = null!;
-
     public string gender { get; set; }
+
     public DateTime CreatedAtUtc { get; set; }
 
     public bool IsActive { get; set; }
