@@ -69,8 +69,5 @@ namespace BLL.Services.CartServices
             await _cartItemRepo.DeleteAsync(id);
             _cartItemRepo.SaveChanges();
         }
-        
-
-        
     }
 }

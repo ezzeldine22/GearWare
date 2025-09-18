@@ -2,6 +2,7 @@ using BLL.DTOs.ProductDtos;
 using BLL.Services.CartServices;
 using BLL.Services.CategoryService;
 using BLL.Services.CategoryService.CategoryService;
+using BLL.Services.OrderService;
 using BLL.Services.ProductServices;
 using CleanArchitecture.Core.Interfaces;
 using CleanArchitecture.Infrastructure.Persistence;
@@ -39,6 +40,7 @@ namespace E_Commerce
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<ICategoryServices, CategoryServices>();
             builder.Services.AddScoped<ICartService ,CartService>();
+            builder.Services.AddScoped<IOrderService ,OrderService>();
             //builder.Services.AddScoped<GetAllProductsDto>();
             //builder.Services.AddScoped<AddProductDto>();
             var app = builder.Build();

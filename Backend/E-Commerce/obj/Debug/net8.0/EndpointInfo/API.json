@@ -272,6 +272,44 @@
         }
       }
     },
+    "/OrderItem/Get Order Items": {
+      "get": {
+        "tags": [
+          "OrderItem"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllOrderItemsDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllOrderItemsDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllOrderItemsDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/Product": {
       "get": {
         "tags": [
@@ -564,6 +602,20 @@
           "categoryCreatedAtUtc": {
             "type": "string",
             "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllOrderItemsDto": {
+        "type": "object",
+        "properties": {
+          "orderItemDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "orderItemPrice": {
+            "type": "number",
+            "format": "double"
           }
         },
         "additionalProperties": false
