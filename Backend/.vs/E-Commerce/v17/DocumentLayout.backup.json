@@ -3,40 +3,24 @@
   "WorkspaceRootPath": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\bll\\services\\orderservice\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|solutionrelative:bll\\services\\orderservice\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\e-commerce\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|solutionrelative:e-commerce\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AE1A641-3CEC-4EF8-BD07-1CC338922DCE}|DAL\\DAL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\dal\\data\\ecommercedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AE1A641-3CEC-4EF8-BD07-1CC338922DCE}|DAL\\DAL.csproj|solutionrelative:dal\\data\\ecommercedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\bll\\services\\productservices\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|solutionrelative:bll\\services\\productservices\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\e-commerce\\controllers\\orderitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|solutionrelative:e-commerce\\controllers\\orderitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\bll\\services\\productservices\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|solutionrelative:bll\\services\\productservices\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5AE1A641-3CEC-4EF8-BD07-1CC338922DCE}|DAL\\DAL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\dal\\data\\models\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AE1A641-3CEC-4EF8-BD07-1CC338922DCE}|DAL\\DAL.csproj|solutionrelative:dal\\data\\models\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5AE1A641-3CEC-4EF8-BD07-1CC338922DCE}|DAL\\DAL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\dal\\generic repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE1A641-3CEC-4EF8-BD07-1CC338922DCE}|DAL\\DAL.csproj|solutionrelative:dal\\generic repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\bll\\services\\orderservice\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|solutionrelative:bll\\services\\orderservice\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\bll\\dtos\\orderdtos\\getallorderitemsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|solutionrelative:bll\\dtos\\orderdtos\\getallorderitemsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\bll\\dtos\\orderdtos\\getallordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|solutionrelative:bll\\dtos\\orderdtos\\getallordersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\e-commerce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|solutionrelative:e-commerce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\bll\\services\\accountmanager\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|solutionrelative:bll\\services\\accountmanager\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5AE1A641-3CEC-4EF8-BD07-1CC338922DCE}|DAL\\DAL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\dal\\generic repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE1A641-3CEC-4EF8-BD07-1CC338922DCE}|DAL\\DAL.csproj|solutionrelative:dal\\generic repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,8 +30,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 771,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\DAL\\Generic Repository\\IRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Generic Repository\\IRepository.cs",
+              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\DAL\\Generic Repository\\IRepository.cs",
+              "RelativeToolTip": "DAL\\Generic Repository\\IRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T12:33:34.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\DAL\\Generic Repository\\Repository.cs",
+              "RelativeDocumentMoniker": "DAL\\Generic Repository\\Repository.cs",
+              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\DAL\\Generic Repository\\Repository.cs*",
+              "RelativeToolTip": "DAL\\Generic Repository\\Repository.cs*",
+              "ViewState": "AgIAACAAAAAAAAAAAAAkwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T12:24:28.484Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -58,119 +68,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderItemController.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\Controllers\\OrderItemController.cs",
-              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\OrderItemController.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\Controllers\\OrderItemController.cs",
-              "RelativeToolTip": "E-Commerce\\Controllers\\OrderItemController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAqwBgAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\ProductController.cs",
+              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "E-Commerce\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAwwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T21:13:41.978Z",
+              "WhenOpened": "2025-09-19T08:32:17.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EcommerceDbContext.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\DAL\\Data\\EcommerceDbContext.cs",
-              "RelativeDocumentMoniker": "DAL\\Data\\EcommerceDbContext.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\DAL\\Data\\EcommerceDbContext.cs",
-              "RelativeToolTip": "DAL\\Data\\EcommerceDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAFAAAAAAAAAA==",
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\ProductServices\\ProductService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\ProductServices\\ProductService.cs",
+              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\ProductServices\\ProductService.cs",
+              "RelativeToolTip": "BLL\\Services\\ProductServices\\ProductService.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAA3wIEAAAByAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T21:03:33.648Z",
+              "WhenOpened": "2025-09-19T08:10:18.249Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Wishlist.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\DAL\\Data\\Models\\Wishlist.cs",
-              "RelativeDocumentMoniker": "DAL\\Data\\Models\\Wishlist.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\DAL\\Data\\Models\\Wishlist.cs",
-              "RelativeToolTip": "DAL\\Data\\Models\\Wishlist.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAiwBUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\ProductServices\\IProductService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\ProductServices\\IProductService.cs",
+              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\ProductServices\\IProductService.cs",
+              "RelativeToolTip": "BLL\\Services\\ProductServices\\IProductService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAWwBAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T21:03:24.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GetAllOrderItemsDto.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\DTOs\\OrderDtos\\GetAllOrderItemsDto.cs",
-              "RelativeDocumentMoniker": "BLL\\DTOs\\OrderDtos\\GetAllOrderItemsDto.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\DTOs\\OrderDtos\\GetAllOrderItemsDto.cs",
-              "RelativeToolTip": "BLL\\DTOs\\OrderDtos\\GetAllOrderItemsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T20:36:18.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetAllOrdersDto.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\DTOs\\OrderDtos\\GetAllOrdersDto.cs",
-              "RelativeDocumentMoniker": "BLL\\DTOs\\OrderDtos\\GetAllOrdersDto.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\DTOs\\OrderDtos\\GetAllOrdersDto.cs",
-              "RelativeToolTip": "BLL\\DTOs\\OrderDtos\\GetAllOrdersDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAowAgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T20:36:09.138Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IOrderService.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\OrderService\\IOrderService.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\OrderService\\IOrderService.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\OrderService\\IOrderService.cs",
-              "RelativeToolTip": "BLL\\Services\\OrderService\\IOrderService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T20:30:43.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderService.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\OrderService\\OrderService.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\OrderService\\OrderService.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\OrderService\\OrderService.cs",
-              "RelativeToolTip": "BLL\\Services\\OrderService\\OrderService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAiwCoAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T20:21:43.614Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\Program.cs",
-              "RelativeDocumentMoniker": "E-Commerce\\Program.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\Program.cs",
-              "RelativeToolTip": "E-Commerce\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAqwBkAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T19:20:37.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AccountManager.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\AccountManager\\AccountManager.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\AccountManager\\AccountManager.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\AccountManager\\AccountManager.cs",
-              "RelativeToolTip": "BLL\\Services\\AccountManager\\AccountManager.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAmwDAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T19:16:17.869Z",
+              "WhenOpened": "2025-09-19T08:09:53.013Z",
               "EditorCaption": ""
             }
           ]

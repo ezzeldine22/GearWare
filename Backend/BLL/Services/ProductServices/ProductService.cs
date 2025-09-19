@@ -4,10 +4,12 @@ using CleanArchitecture.Core.Interfaces;
 using CleanArchitecture.Infrastructure.Persistence;
 using DAL.Data.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace BLL.Services.ProductServices
@@ -124,5 +126,38 @@ namespace BLL.Services.ProductServices
 
             return ProductByIdDto;
         }
+
+        public  async Task<IEnumerable<GetAllProductsDto>> SearchProductsPagedAsync(string query , int PageNumber)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                throw new CustomException(new List<string> {"Please enter something !!!"});
+            }
+            var EnhancedQuery = query.Trim();
+
+            var ProductQuery =  _ProductRepo.ReadAll().Include(p => p.Category).Where(p =>
+            EF.Functions.Like(p.Name, $"{EnhancedQuery}%")          ||
+            EF.Functions.Like(p.Description, $"%{EnhancedQuery}%")  ||
+            EF.Functions.Like(p.Category.Name, $"{EnhancedQuery}%"));    
+         
+            var Matched = await ProductQuery
+              .Skip((PageNumber - 1)* 16)
+              .Take(16)
+              .ToListAsync();
+
+            if (!Matched.Any())
+            {
+                throw new CustomException(new List<string> { "No Products Found !!!" });
+            }
+
+            return GetAll(Matched);
+
+        }
+
+
+
+       
+
+
     }
 }

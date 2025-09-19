@@ -62,15 +62,6 @@ namespace BLL.Services.OrderService
 
             return AllOrderItemsDto;
         }
-        //private decimal GetTotalPrice(int orderId)
-        //{
-        //    var AllOrderItems = GetAllOrderItems(orderId);
-        //    var Result = 0.0m;
-        //    foreach (var orderItem in AllOrderItems)
-        //    {
-        //        Result += ((orderItem.OrderItemQuantity) * (orderItem.OrderItemPrice));
-        //    }
-        //    return Result;
-        //}
+    
     }
 }

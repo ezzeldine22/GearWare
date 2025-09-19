@@ -17,6 +17,7 @@ namespace CleanArchitecture.Core.Interfaces
         Task<IEnumerable<TResult>> Select<TSource, TResult>(Expression<Func<TSource, TResult>> selector) where TSource : class;
         Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate);
         IEnumerable<TEntity> Where(Expression<Func<TEntity, bool>> predicate);
+
         int SaveChanges();
     }
 }

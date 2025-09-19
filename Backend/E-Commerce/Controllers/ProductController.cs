@@ -76,5 +76,23 @@ namespace E_Commerce.Controllers
             await productService.EditProductAsync(editProductDto);
             return Ok();
         }
+
+        [HttpGet("search")]
+        public async Task<ActionResult<IEnumerable<GetAllProductsDto>>> Search(string query, int pageNumber = 1)
+        {
+            try
+            {
+                var result = await productService.SearchProductsPagedAsync(query, pageNumber);
+                return Ok(result);
+            }
+            catch (CustomException ex)
+            {
+                return BadRequest(new
+                {
+                    ex.Errors
+                });
+            }
+
+        }
     }
 }

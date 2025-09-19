@@ -15,6 +15,7 @@ namespace BLL.Services.ProductServices
         Task EditProductAsync(EditProductDto editProductDto);
         Task<GetProductByIdDto> GetProductByIdAsync(int Id);
         IEnumerable<GetAllProductsDto> GetAllProducts();
+        Task<IEnumerable<GetAllProductsDto>> SearchProductsPagedAsync(string query, int PageNumber);
 
     }
 }
