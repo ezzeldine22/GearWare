@@ -5,6 +5,7 @@ using BLL.Services.CategoryService;
 using BLL.Services.CategoryService.CategoryService;
 using BLL.Services.OrderService;
 using BLL.Services.ProductServices;
+using BLL.Services.ReviewService;
 using BLL.Services.WishListService;
 using CleanArchitecture.Core.Interfaces;
 using CleanArchitecture.Infrastructure.Persistence;
@@ -47,6 +48,7 @@ namespace E_Commerce
             builder.Services.AddScoped<IOrderService ,OrderService>();
             builder.Services.AddScoped<IAccountManager, AccountManager>();
             builder.Services.AddScoped<IWishListService, WishListService>();
+            builder.Services.AddScoped<IReviewService, ReviewService>();
 
             //------------------------------------------------------//
 

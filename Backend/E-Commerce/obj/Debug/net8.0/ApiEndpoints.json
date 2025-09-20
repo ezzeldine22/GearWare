@@ -371,6 +371,58 @@
     ]
   },
   {
+    "ContainingType": "E_Commerce.Controllers.ReviewController",
+    "Method": "AddReview",
+    "RelativePath": "Review/{clientId}/{productId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addReviewDto",
+        "Type": "BLL.DTOs.ReviewDTOs.AddReviewDto",
+        "IsRequired": true
+      },
+      {
+        "Name": "clientId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "E_Commerce.Controllers.ReviewController",
+    "Method": "GetAll",
+    "RelativePath": "Review/{productId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "BLL.DTOs.ReviewDTOs.GetAllReviewsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "E_Commerce.Controllers.WishListController",
     "Method": "AddItem",
     "RelativePath": "WishList",
