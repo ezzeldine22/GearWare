@@ -1,6 +1,7 @@
 ﻿using BLL.DTOs.ProductDtos;
 using BLL.Exceptions;
 using BLL.Services.ProductServices;
+using DAL.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -61,7 +62,7 @@ namespace E_Commerce.Controllers
 
 
         [HttpDelete("{Id}")]
-        [Authorize("Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> DeleteProduct(int Id)
         {
             await productService.DeleteProductAsync(Id);
@@ -77,7 +78,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpPut("")]
-        [Authorize("Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> EditProduct(EditProductDto editProductDto)
         {
             await productService.EditProductAsync(editProductDto);
@@ -86,7 +87,7 @@ namespace E_Commerce.Controllers
 
         [HttpGet("search")]
        
-        public async Task<ActionResult<IEnumerable<GetAllProductsDto>>> Search(string query, int pageNumber = 1)
+        public async Task<ActionResult<IEnumerable<GetAllProductsDto>>> Search(string query, int pageNumber = 1 , ProductSortBy sortBy = ProductSortBy.Latest)
         {
             try
             {

@@ -13,6 +13,7 @@ namespace BLL.DTOs.ProductDtos
         public decimal ProductPrice { get; set; }
         public string ProductDescription { get; set; }
 
+        public string imageUrl { get; set; }
         public int ProductStockQuantity { get; set; }
 
         public string ProductCategoryName { get; set; }

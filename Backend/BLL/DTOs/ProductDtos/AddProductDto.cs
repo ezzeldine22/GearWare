@@ -21,6 +21,8 @@ namespace BLL.DTOs.ProductDtos
         public int ProductStockQuantity { get; set; }
         [Required(ErrorMessage = "This is A Required Field")]
         public string  ProductCategoryName { get; set; }
+        [Required(ErrorMessage = "This is A Required Field")]
+        public string Imageurl { get; set; }
 
 
     }

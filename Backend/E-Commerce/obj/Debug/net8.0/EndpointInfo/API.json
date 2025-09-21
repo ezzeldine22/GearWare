@@ -634,6 +634,13 @@
               "format": "int32",
               "default": 1
             }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/ProductSortBy"
+            }
           }
         ],
         "responses": {
@@ -864,6 +871,7 @@
       },
       "AddProductDto": {
         "required": [
+          "imageurl",
           "productCategoryName",
           "productDescription",
           "productName",
@@ -889,6 +897,10 @@
             "format": "int32"
           },
           "productCategoryName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "imageurl": {
             "minLength": 1,
             "type": "string"
           }
@@ -961,6 +973,10 @@
             "format": "double"
           },
           "productDescription": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
             "type": "string",
             "nullable": true
           },
@@ -1179,6 +1195,16 @@
           }
         },
         "additionalProperties": false
+      },
+      "ProductSortBy": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "RegisterDto": {
         "required": [
