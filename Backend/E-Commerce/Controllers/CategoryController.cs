@@ -3,6 +3,7 @@ using BLL.DTOs.ProductDtos;
 using BLL.Exceptions;
 using BLL.Services.CategoryService.CategoryService;
 using BLL.Services.ProductServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_Commerce.Controllers
@@ -19,6 +20,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("")]
+        [Authorize("")]
         public ActionResult<GetAllCategoriesDto> GetAll()
         {
             try
@@ -32,6 +34,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize("")]
         public ActionResult<GetAllProductsDto> GetById(int id)
         {
             var category = _categoryServices.GetCategoryByIdAsync(id);
@@ -39,6 +42,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpPost("")]
+        [Authorize("Admin")]
         public async Task<ActionResult> AddCategory(AddCategoryDto addCategoryDto)
         {
             if (!ModelState.IsValid)
@@ -61,6 +65,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize("Admin")]
         public async Task<ActionResult> DeleteCategory(int id)
         {
             await _categoryServices.DeleteCategoryAsync(id);
@@ -68,7 +73,8 @@ namespace E_Commerce.Controllers
         }
 
         [HttpPut("")]
-        public async Task<ActionResult> EditProduct(EditCategoryDto editCategoryDto)
+        [Authorize("Admin")]
+        public async Task<ActionResult> EditCategory(EditCategoryDto editCategoryDto)
         {
             await _categoryServices.EditCategoryAsync(editCategoryDto);
             return Ok();

@@ -11,7 +11,7 @@ namespace BLL.Services.CartServices
     {
         Task AddToCart(AddToCartDto addToCartDto);
         Task UpdateQuantity(UpdateQuantityDto updateQuantityDto);
-        IEnumerable<GetAllCartItemsDto> GetAllCartItems();
+        IEnumerable<GetAllCartItemsDto> GetAllCartItems(int CartId);
         Task DeleteCartItem(int id);
     }
 }

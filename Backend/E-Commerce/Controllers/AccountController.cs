@@ -3,6 +3,7 @@ using BLL.DTOs.ProductDtos;
 using BLL.Exceptions;
 using BLL.Managers.AccountManager;
 using BLL.Services.ProductServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace BLL.Services.AccountManager
             _accountManager = accountManager;
         }
         [HttpPost("Register")]
+   
         public async Task<ActionResult> Register(RegisterDto registerDto)
         {
             if (!ModelState.IsValid)
@@ -44,6 +46,7 @@ namespace BLL.Services.AccountManager
         }
 
         [HttpPost("Login")]
+      
         public async Task<ActionResult<ValidloginDto>> Login(LoginDto LoginDto)
         {
             try

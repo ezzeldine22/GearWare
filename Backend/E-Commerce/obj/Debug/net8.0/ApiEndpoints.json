@@ -80,7 +80,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "cartId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.IEnumerable\u00601[[BLL.DTOs.CartDtos.GetAllCartItemsDto, BLL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
@@ -147,7 +153,7 @@
   },
   {
     "ContainingType": "E_Commerce.Controllers.CategoryController",
-    "Method": "EditProduct",
+    "Method": "EditCategory",
     "RelativePath": "Category",
     "HttpMethod": "PUT",
     "IsController": true,

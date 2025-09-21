@@ -1,12 +1,14 @@
 ﻿using BLL.DTOs.ProductDtos;
 using BLL.Exceptions;
 using BLL.Services.ProductServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_Commerce.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+  
     public class ProductController : ControllerBase
     {
 
@@ -20,6 +22,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("")]
+        [Authorize("")]
         public ActionResult<IEnumerable<GetAllProductsDto>> GetAllProducts()
         {
             try
@@ -34,7 +37,7 @@ namespace E_Commerce.Controllers
         }
         
         [HttpPost("")]
-        
+        [Authorize("Admin")]
         public async Task<ActionResult> AddProduct(AddProductDto _addProductDto)
         {
             if (!ModelState.IsValid)
@@ -57,6 +60,7 @@ namespace E_Commerce.Controllers
 
 
         [HttpDelete("{Id}")]
+        [Authorize("Admin")]
         public async Task<ActionResult> DeleteProduct(int Id)
         {
             await productService.DeleteProductAsync(Id);
@@ -71,6 +75,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpPut("")]
+        [Authorize("Admin")]
         public async Task<ActionResult> EditProduct(EditProductDto editProductDto)
         {
             await productService.EditProductAsync(editProductDto);
@@ -78,6 +83,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("search")]
+        [Authorize("")]
         public async Task<ActionResult<IEnumerable<GetAllProductsDto>>> Search(string query, int pageNumber = 1)
         {
             try

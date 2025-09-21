@@ -96,6 +96,7 @@ namespace E_Commerce
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
 
