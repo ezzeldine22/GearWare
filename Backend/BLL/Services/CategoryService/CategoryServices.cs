@@ -38,7 +38,8 @@ namespace BLL.Services.CategoryService
             var AddCategory = new Category
             {
                 Name = _addCategoryDto.categoryName,
-                Description = _addCategoryDto.categoryDescription
+                Description = _addCategoryDto.categoryDescription,
+                ImageUrl = _addCategoryDto.imgUrl
             };
 
             await _categoryRepo.AddAsync(AddCategory);

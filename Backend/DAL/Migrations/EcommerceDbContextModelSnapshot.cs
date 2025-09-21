@@ -377,8 +377,8 @@ namespace DAL.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<byte>("Rating")
-                        .HasColumnType("tinyint");
+                    b.Property<float>("Rating")
+                        .HasColumnType("real");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()

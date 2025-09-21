@@ -23,9 +23,9 @@ namespace BLL.Services.AccountManager
         {
             _accountManager = accountManager;
         }
+
         [HttpPost("Register")]
         [AllowAnonymous]
-
         public async Task<ActionResult> Register(RegisterDto registerDto)
         {
             if (!ModelState.IsValid)

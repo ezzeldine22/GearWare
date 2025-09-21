@@ -42,7 +42,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpPost("")]
-        [Authorize("Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> AddCategory(AddCategoryDto addCategoryDto)
         {
             if (!ModelState.IsValid)
@@ -65,7 +65,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize("Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> DeleteCategory(int id)
         {
             await _categoryServices.DeleteCategoryAsync(id);
@@ -73,7 +73,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpPut("")]
-        [Authorize("Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> EditCategory(EditCategoryDto editCategoryDto)
         {
             await _categoryServices.EditCategoryAsync(editCategoryDto);

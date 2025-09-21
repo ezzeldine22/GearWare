@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "API",
-    "version": "1.0"
+    "version": "v1"
   },
   "paths": {
     "/Account/Register": {
@@ -842,7 +842,8 @@
       "AddCategoryDto": {
         "required": [
           "categoryDescription",
-          "categoryName"
+          "categoryName",
+          "imgUrl"
         ],
         "type": "object",
         "properties": {
@@ -851,6 +852,10 @@
             "type": "string"
           },
           "categoryDescription": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "imgUrl": {
             "minLength": 1,
             "type": "string"
           }
@@ -1249,6 +1254,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Enter 'Bearer' followed by a space and the JWT token.",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
