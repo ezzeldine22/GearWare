@@ -11,6 +11,8 @@ public partial class Category
 
     public string? Description { get; set; }
 
+    public string ImageUrl { get; set; } = null!;
+
     public DateTime CreatedAtUtc { get; set; }
 
     public byte[] RowVersion { get; set; } = null!;

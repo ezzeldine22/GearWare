@@ -44,7 +44,7 @@ namespace BLL.Services.ReviewService
                 throw new CustomException(new List<string> { "there is no reviews her" });
             }
 
-            var rate = (float)await productReviews.AverageAsync(pr => pr.Rating); 
+            var rate = await productReviews.AverageAsync(pr => pr.Rating); 
                           
                           
 

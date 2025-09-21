@@ -19,7 +19,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("{productId}")]
-        [Authorize("")]
+  
         public async Task<ActionResult<GetAllReviewsDto>> GetAll(int productId)
         {
             var reviews = await _reviewService.GetReviewAsync(productId);
@@ -27,7 +27,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpPost("{clientId}/{productId}")]
-        [Authorize("")]
+    
         public async Task<ActionResult> AddReview(AddReviewDto addReviewDto, string clientId, int productId)
         {
             await _reviewService.AddReviewAsync(addReviewDto, clientId, productId);

@@ -118,8 +118,6 @@ namespace BLL.Managers.AccountManager
                 gender = registerDto.gender,
                 UserName = registerDto.email.Split('@')[0],
             };
-
-            
              var hashedPass = await _userManager.CreateAsync(newUser,registerDto.password);
 
              if (hashedPass.Succeeded)

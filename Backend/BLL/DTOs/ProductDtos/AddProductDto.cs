@@ -23,8 +23,5 @@ namespace BLL.DTOs.ProductDtos
         public string  ProductCategoryName { get; set; }
 
 
-
-        
-
     }
 }

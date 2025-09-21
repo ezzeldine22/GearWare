@@ -11,7 +11,9 @@ using CleanArchitecture.Core.Interfaces;
 using CleanArchitecture.Infrastructure.Persistence;
 using DAL.Data;
 using DAL.Data.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -54,7 +56,20 @@ namespace E_Commerce
 
             builder.Services.AddIdentity<User, IdentityRole>(options => { })
             .AddEntityFrameworkStores<EcommerceDbContext>();
-            
+
+
+
+            builder.Services.AddControllers(options =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                                .RequireAuthenticatedUser()
+                                .RequireRole("Admin", "Client")
+                                .Build();
+
+                options.Filters.Add(new AuthorizeFilter(policy));
+            });
+
+
 
             builder.Services.AddAuthentication(options =>
             {
@@ -96,6 +111,7 @@ namespace E_Commerce
 
             app.UseHttpsRedirection();
 
+         
             app.UseAuthentication();
             app.UseAuthorization();
 

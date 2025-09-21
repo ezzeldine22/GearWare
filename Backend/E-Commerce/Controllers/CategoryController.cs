@@ -20,7 +20,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("")]
-        [Authorize("")]
+        
         public ActionResult<GetAllCategoriesDto> GetAll()
         {
             try
@@ -34,7 +34,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("{id}")]
-        [Authorize("")]
+      
         public ActionResult<GetAllProductsDto> GetById(int id)
         {
             var category = _categoryServices.GetCategoryByIdAsync(id);

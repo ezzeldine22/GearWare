@@ -17,7 +17,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("Get Order Items")]
-        [Authorize("")]
+
         public ActionResult<IEnumerable<GetAllOrderItemsDto>> GetAllOrderItems(int orderId)
         {
             var AllOrderItems = _orderService.GetAllOrderItems(orderId);
@@ -25,7 +25,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("Get AllOrders")]
-        [Authorize("")]
+     
         public ActionResult<IEnumerable<GetAllOrdersDto>> GetAllOrders(string ClientId)
         {
             var AllOrders = _orderService.GetAllOrders(ClientId);

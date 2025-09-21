@@ -24,7 +24,8 @@ namespace BLL.Services.AccountManager
             _accountManager = accountManager;
         }
         [HttpPost("Register")]
-   
+        [AllowAnonymous]
+
         public async Task<ActionResult> Register(RegisterDto registerDto)
         {
             if (!ModelState.IsValid)
@@ -46,7 +47,7 @@ namespace BLL.Services.AccountManager
         }
 
         [HttpPost("Login")]
-      
+        [AllowAnonymous]
         public async Task<ActionResult<ValidloginDto>> Login(LoginDto LoginDto)
         {
             try

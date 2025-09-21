@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace BLL.DTOs.ProductDtos
 
         public string ProductDescription { get; set; }
 
+        public IEnumerable<string> ProductImages { get; set; }
         public string ProductCategory { get; set; }
 
         public decimal ProductPrice { get; set; }

@@ -22,7 +22,8 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("")]
-        [Authorize("")]
+       
+
         public ActionResult<IEnumerable<GetAllProductsDto>> GetAllProducts()
         {
             try
@@ -37,7 +38,7 @@ namespace E_Commerce.Controllers
         }
         
         [HttpPost("")]
-        [Authorize("Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> AddProduct(AddProductDto _addProductDto)
         {
             if (!ModelState.IsValid)
@@ -68,7 +69,8 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("{Id}")]
-        public async Task<ActionResult> GetById(int Id)
+    
+        public async Task<ActionResult<GetProductByIdDto>> GetById(int Id)
         {
             var product = await productService.GetProductByIdAsync(Id);
             return Ok(product);
@@ -83,7 +85,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("search")]
-        [Authorize("")]
+       
         public async Task<ActionResult<IEnumerable<GetAllProductsDto>>> Search(string query, int pageNumber = 1)
         {
             try

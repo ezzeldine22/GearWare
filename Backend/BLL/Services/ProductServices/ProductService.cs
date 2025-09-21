@@ -44,8 +44,10 @@ namespace BLL.Services.ProductServices
                 Description = _addProductDto.ProductDescription,
                 StockQuantity = _addProductDto.ProductStockQuantity,
                 CategoryId = AddedProductCategory.CategoryId // combo box 
+                
 
             };
+
 
              await _ProductRepo.AddAsync(AddedProduct);
             _ProductRepo.SaveChanges();
@@ -77,7 +79,7 @@ namespace BLL.Services.ProductServices
         public IEnumerable<GetAllProductsDto> GetAllProducts()
         {
             var AllProducts = _ProductRepo.ReadAll()
-                .Include(p => p.Category)
+                .Include(p => p.Images).Include(p=>p.Category)
                 .ToList();
 
             return GetAll(AllProducts);
@@ -99,6 +101,7 @@ namespace BLL.Services.ProductServices
                 ProductDescription = p.Description,
                 ProductStockQuantity = p.StockQuantity,
                 ProductCategory = p.Category.Name,
+                Images = p.Images.Select(p=>p.ImageUrl)
 
             }).ToList();
 
@@ -107,21 +110,22 @@ namespace BLL.Services.ProductServices
 
         public async Task<GetProductByIdDto> GetProductByIdAsync(int Id)
         {
-            var ProductById = await _ProductRepo.ReadById(Id);
+            var ProductById = await _ProductRepo.ReadAll().Include(p=>p.Category).Include(p=>p.Images).FirstOrDefaultAsync(p=>p.ProductId == Id);
 
             if (ProductById == null)
             {
                 throw new CustomException(new List<string> { "No Products To Show !!!" });
             }
 
-            var Category = await _categoryRepo.FirstOrDefaultAsync(c => c.CategoryId == ProductById.CategoryId);
+         
             var ProductByIdDto = new GetProductByIdDto
             {
                 ProductName = ProductById.Name,
                 ProductPrice = ProductById.Price,
                 ProductDescription = ProductById.Description,
                 ProductStockQuantity = ProductById.StockQuantity,
-                ProductCategory = Category.Name,
+                ProductCategory = ProductById.Category.Name,
+                ProductImages = ProductById.Images.Select(i=>i.ImageUrl)
             };
 
             return ProductByIdDto;
@@ -153,11 +157,6 @@ namespace BLL.Services.ProductServices
             return GetAll(Matched);
 
         }
-
-
-
-       
-
 
     }
 }

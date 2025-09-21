@@ -20,7 +20,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("{ClientId}")]
-        [Authorize("")]
+
         public ActionResult<IEnumerable<GetAllWishListItemDtos>> GetAll(string ClientId)
         {
             try
@@ -35,7 +35,7 @@ namespace E_Commerce.Controllers
         }
 
         [HttpPost("")]
-        [Authorize("")]
+ 
         public ActionResult AddItem(int productId, string ClientId)
         {
             _wishListService.AddItemToWishList(productId, ClientId);

@@ -8,7 +8,7 @@ namespace BLL.DTOs.ReviewDTOs
 {
     public class AddReviewDto
     {
-        public byte Rating { get; set; }
+        public float Rating { get; set; }
 
         public string? Comment { get; set; }
     }
