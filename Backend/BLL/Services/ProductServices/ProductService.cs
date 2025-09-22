@@ -75,17 +75,17 @@ namespace BLL.Services.ProductServices
         {
             var EditedProduct = await _ProductRepo.ReadById(editProductDto.ProductId);
             var Category = await _categoryRepo.FirstOrDefaultAsync(c => c.Name == editProductDto.ProductCategoryName);
+            var editedImage = await _poductImageRepo.FirstOrDefaultAsync(pi=>pi.ProductId == editProductDto.ProductId);
 
             EditedProduct.Name = editProductDto.ProductName;
             EditedProduct.Price = editProductDto.ProductPrice;
             EditedProduct.Description = editProductDto.ProductDescription;
             EditedProduct.CategoryId = Category.CategoryId;
             EditedProduct.StockQuantity = editProductDto.ProductStockQuantity;
-
-            var editedImage = await _poductImageRepo.FirstOrDefaultAsync(pi=>pi.ProductId == editProductDto.ProductId);
             editedImage.ImageUrl = editProductDto.imageUrl;
 
 
+            _poductImageRepo.UpdateAsync(editedImage);
             _ProductRepo.UpdateAsync(EditedProduct);
             _ProductRepo.SaveChanges();
         }
@@ -164,7 +164,6 @@ namespace BLL.Services.ProductServices
                     EF.Functions.Like(p.Category.Name, $"{EnhancedQuery}%")
                 );
 
-            
             ProductQuery = sortBy switch
             {
                 ProductSortBy.PriceLowToHigh => ProductQuery.OrderBy(p => p.Price),
@@ -176,17 +175,16 @@ namespace BLL.Services.ProductServices
             };
 
             var Matched = await ProductQuery
-           .Skip((pageNumber - 1) * 16)
-           .Take(16)
-           .ToListAsync();
+               .Skip((pageNumber - 1) * 16)
+               .Take(16)
+               .ToListAsync();
 
             if (!Matched.Any())
             {
                 throw new CustomException(new List<string> { "No Products Found !!!" });
             }
 
-
-            return GetAll(ProductQuery);
+            return GetAll(Matched);
 
         }
     }

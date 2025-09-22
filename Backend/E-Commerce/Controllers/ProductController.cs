@@ -91,7 +91,7 @@ namespace E_Commerce.Controllers
         {
             try
             {
-                var result = await productService.SearchProductsPagedAsync(query, pageNumber);
+                var result = await productService.SearchProductsPagedAsync(query, pageNumber,sortBy);
                 return Ok(result);
             }
             catch (CustomException ex)
