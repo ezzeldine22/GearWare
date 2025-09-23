@@ -29,26 +29,21 @@ namespace E_Commerce
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-
-
             builder.Services.AddDbContext<EcommerceDbContext>(Option =>
-            Option.UseSqlServer(builder.Configuration.GetConnectionString("EDB"))
+                Option.UseSqlServer(builder.Configuration.GetConnectionString("EDB"))
             );
 
             //------------------------------------------------------//
 
-
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<ICategoryServices, CategoryServices>();
-            builder.Services.AddScoped<ICartService ,CartService>();
-            builder.Services.AddScoped<IOrderService ,OrderService>();
+            builder.Services.AddScoped<ICartService, CartService>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
             builder.Services.AddScoped<IAccountManager, AccountManager>();
             builder.Services.AddScoped<IWishListService, WishListService>();
             builder.Services.AddScoped<IReviewService, ReviewService>();
@@ -56,9 +51,7 @@ namespace E_Commerce
             //------------------------------------------------------//
 
             builder.Services.AddIdentity<User, IdentityRole>(options => { })
-            .AddEntityFrameworkStores<EcommerceDbContext>();
-
-
+                .AddEntityFrameworkStores<EcommerceDbContext>();
 
             builder.Services.AddControllers(options =>
             {
@@ -69,8 +62,6 @@ namespace E_Commerce
 
                 options.Filters.Add(new AuthorizeFilter(policy));
             });
-
-
 
             builder.Services.AddAuthentication(options =>
             {
@@ -90,22 +81,19 @@ namespace E_Commerce
                 };
             });
 
-
             builder.Services.Configure<IdentityOptions>(options =>
             {
                 options.Password.RequireDigit = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireLowercase = false;
                 options.Password.RequireNonAlphanumeric = false;
-
             });
-
 
             builder.Services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
 
-                // Add the JWT Bearer definition
+               
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
@@ -118,25 +106,35 @@ namespace E_Commerce
 
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
-            {
-                new OpenApiSecurityScheme
-                {
-                    Reference = new OpenApiReference
                     {
-                        Type = ReferenceType.SecurityScheme,
-                        Id = "Bearer"
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
                     }
-                },
-                Array.Empty<string>()
-                 }
                 });
             });
 
+      
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    policy =>
+                    {
+                        policy.AllowAnyOrigin()
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
 
             var app = builder.Build();
 
-
-            // Configure the HTTP request pipeline.
+        
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -145,10 +143,11 @@ namespace E_Commerce
 
             app.UseHttpsRedirection();
 
-         
+           
+            app.UseCors("AllowAll");
+
             app.UseAuthentication();
             app.UseAuthorization();
-
 
             app.MapControllers();
 
