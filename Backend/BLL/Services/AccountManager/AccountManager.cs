@@ -4,6 +4,7 @@ using DAL.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -21,14 +22,17 @@ namespace BLL.Managers.AccountManager
         private readonly UserManager<User> _userManager;
         private readonly IConfiguration _configuration;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly ILogger<AccountManager> _logger;
 
         public AccountManager(UserManager<User> userManager,
                               IConfiguration configuration,
-                              RoleManager<IdentityRole> roleManager)
+                              RoleManager<IdentityRole> roleManager,
+                              ILogger<AccountManager> logger)
         {
             _userManager = userManager;
             _configuration = configuration;
             _roleManager = roleManager;
+            _logger = logger;
         }
 
 
@@ -151,6 +155,55 @@ namespace BLL.Managers.AccountManager
             return token;
         }
 
-       
+        public async Task<User> ExternalLoginCallBackAsync(ClaimsPrincipal externalUser , string Provider)
+        {
+            var provider = Provider;
+            var email = externalUser.FindFirstValue(ClaimTypes.Email);
+            var providerKey = externalUser.FindFirstValue(ClaimTypes.NameIdentifier);
+            var gender = externalUser.FindFirstValue(ClaimTypes.Gender);
+
+            if (string.IsNullOrEmpty(provider) || string.IsNullOrEmpty(providerKey))
+            {
+                throw new CustomException(new List<string> { "External login failed: provider or provider key missing." });
+            }
+
+            if (string.IsNullOrEmpty(email))
+            {
+                throw new CustomException(new List<string> { "External login provider did not supply an email." });
+            }
+
+
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if (user == null)
+            {
+                var fullName = email.Split('@')[0];
+                user = new User
+                {
+                    UserName = email,
+                    Email = email,
+                    Name = fullName,
+                    gender = gender
+
+                };
+
+                var createResult = await _userManager.CreateAsync(user);
+                if (!createResult.Succeeded)
+                {
+                    throw new CustomException(new List<string> { "Failed to create user" });
+                }
+            }
+
+
+            var externalLoginInfo = new UserLoginInfo(provider, providerKey, provider);
+            var addLoginResult = await _userManager.AddLoginAsync(user, externalLoginInfo);
+
+            if (!addLoginResult.Succeeded)
+            {
+                throw new CustomException(new List<string> { "Failed to add external login for user" });
+            }
+
+            return user;
+        }
     }
 }

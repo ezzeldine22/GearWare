@@ -1,5 +1,6 @@
 using BLL.DTOs.ProductDtos;
 using BLL.Managers.AccountManager;
+using BLL.Services.AccountManager;
 using BLL.Services.CartServices;
 using BLL.Services.CategoryService;
 using BLL.Services.CategoryService.CategoryService;
@@ -50,6 +51,7 @@ namespace E_Commerce
             builder.Services.AddScoped<IAccountManager, AccountManager>();
             builder.Services.AddScoped<IWishListService, WishListService>();
             builder.Services.AddScoped<IReviewService, ReviewService>();
+            builder.Services.AddScoped<Logger<AccountController>>();
 
             //------------------------------------------------------//
 

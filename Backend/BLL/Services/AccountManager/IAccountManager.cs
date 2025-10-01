@@ -13,8 +13,8 @@ namespace BLL.Managers.AccountManager
     {
         Task<ValidloginDto> Login(LoginDto loginDto);
         string GenerateToken(IList<Claim> claims);
-
+        Task<User> ExternalLoginCallBackAsync(ClaimsPrincipal claimsPrincipal , string provider);
         Task<string> Register(RegisterDto RegisterDto);
-        
+  
     }
 }
