@@ -18,7 +18,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Net.Http.Headers;
+using System.Security.Claims;
 using System.Text;
+using System.Text.Json;
 
 namespace E_Commerce
 {
@@ -52,7 +55,6 @@ namespace E_Commerce
 
             builder.Services.AddIdentity<User, IdentityRole>(options => { })
                 .AddEntityFrameworkStores<EcommerceDbContext>();
-
             builder.Services.AddControllers(options =>
             {
                 var policy = new AuthorizationPolicyBuilder()
@@ -81,6 +83,82 @@ namespace E_Commerce
                 };
             });
 
+            builder.Services.AddHttpClient("GoogleApi", client =>
+            {
+                client.BaseAddress = new Uri("https://people.googleapis.com/");
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+            });
+            //---------------------Google , Facebook ---------------//
+
+            builder.Services.AddAuthentication().
+                AddGoogle(options => // google options options --> oAuthoptions : used to build the oAuth flow
+                {
+                    options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
+                    options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+                    options.Scope.Add("https://www.googleapis.com/auth/user.gender.read");
+
+
+                    options.Events.OnCreatingTicket = async context =>
+                    {
+                        var logger = context.HttpContext.RequestServices
+                        .GetRequiredService<ILogger<Program>>();
+                        var accessToken = context.AccessToken;
+                        if (string.IsNullOrEmpty(accessToken)) return;
+
+                        try
+                        {
+                            var clientFactory = context.HttpContext.RequestServices.GetRequiredService<IHttpClientFactory>();
+                            var client = clientFactory.CreateClient("GoogleApi");
+                            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+                            using var response = await client.GetAsync("v1/people/me?personFields=genders");
+                            if (!response.IsSuccessStatusCode)
+                            {
+                                logger.LogWarning(
+                               $"Google API request failed. StatusCode: {response.StatusCode}, Reason: {response.ReasonPhrase}" 
+                               );
+                                return;
+                            }
+
+                            await using var stream = await response.Content.ReadAsStreamAsync();
+                            using var doc = await JsonDocument.ParseAsync(stream);
+
+                            if (doc.RootElement.TryGetProperty("genders", out var genders) &&
+                                genders.ValueKind == JsonValueKind.Array &&
+                                genders.GetArrayLength() > 0)
+                            {
+                                var first = genders[0];
+                                if (first.TryGetProperty("value", out var val) && val.ValueKind == JsonValueKind.String)
+                                {
+                                    var gender = val.GetString();
+                                    if (!string.IsNullOrEmpty(gender))
+                                    {
+                                        context.Identity.AddClaim(new Claim(ClaimTypes.Gender, gender));
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            logger.LogError(ex, "An error occurred while fetching gender from Google People API");
+                        }
+                    };
+
+                });
+
+            builder.Services.AddAuthentication().AddFacebook(options =>
+            {
+                options.AppId = builder.Configuration["Authentication:Facebook:AppId"];
+                options.AppSecret = builder.Configuration["Authentication:Facebook:AppSecret"];
+                options.Scope.Add("email");
+                options.Scope.Add("public_profile");
+                options.Scope.Add("user_gender");
+                options.Fields.Add("gender");
+                
+            });
+
+            //-----------------------------------------------------//
             builder.Services.Configure<IdentityOptions>(options =>
             {
                 options.Password.RequireDigit = false;

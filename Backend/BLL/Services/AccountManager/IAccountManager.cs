@@ -12,6 +12,8 @@ namespace BLL.Managers.AccountManager
     public interface IAccountManager
     {
         Task<ValidloginDto> Login(LoginDto loginDto);
+        string GenerateToken(IList<Claim> claims);
+
         Task<string> Register(RegisterDto RegisterDto);
         
     }

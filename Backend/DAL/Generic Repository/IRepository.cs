@@ -14,7 +14,7 @@ namespace CleanArchitecture.Core.Interfaces
         IQueryable<TEntity> ReadAll();
         void UpdateAsync(TEntity entity);
         Task DeleteAsync(int entityID);
-        Task<IEnumerable<TResult>> Select<TSource, TResult>(Expression<Func<TSource, TResult>> selector) where TSource : class;
+        
         Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate);
         IEnumerable<TEntity> Where(Expression<Func<TEntity, bool>> predicate);
 

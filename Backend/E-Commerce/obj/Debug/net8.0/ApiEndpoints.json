@@ -1,6 +1,43 @@
 [
   {
     "ContainingType": "BLL.Services.AccountManager.AccountController",
+    "Method": "ExternalLogin",
+    "RelativePath": "Account/external-login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "provider",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BLL.Services.AccountManager.AccountController",
+    "Method": "ExternalLoginCallback",
+    "RelativePath": "Account/external-login-callback",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "returnUrl",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BLL.Services.AccountManager.AccountController",
     "Method": "Login",
     "RelativePath": "Account/Login",
     "HttpMethod": "POST",

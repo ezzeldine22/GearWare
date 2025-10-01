@@ -31,6 +31,9 @@ namespace BLL.Managers.AccountManager
             _roleManager = roleManager;
         }
 
+
+       
+
         private async Task AssignRoleToUser(User User)
         {
 
@@ -93,7 +96,6 @@ namespace BLL.Managers.AccountManager
                 roles = role,
             };
         }
-
         public async Task<string> Register(RegisterDto registerDto)
         {
             var CheckEmailRedundncy = await _userManager.Users.AnyAsync(u => u.Email == registerDto.email);
@@ -130,9 +132,7 @@ namespace BLL.Managers.AccountManager
              return Errors;
 
         }
-
-        
-        private string GenerateToken(IList<Claim> claims)
+        public string GenerateToken(IList<Claim> claims)
         {
             var secretKey = _configuration.GetSection("SecretKey").Value;
 

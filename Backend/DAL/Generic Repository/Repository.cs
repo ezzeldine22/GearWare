@@ -56,10 +56,6 @@ namespace CleanArchitecture.Infrastructure.Persistence
             return _entity.Where(predicate);
         }
 
-        public async Task<IEnumerable<TResult>> Select<TSource, TResult>(
-        Expression<Func<TSource, TResult>> selector
-        ) where TSource : class => await _context.Set<TSource>()
-                         .Select(selector)
-                         .ToListAsync();
+     
     }
 }
