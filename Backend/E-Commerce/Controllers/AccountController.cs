@@ -20,6 +20,7 @@ namespace BLL.Services.AccountManager
     [ApiController]
     [Route("[controller]")]
     // Test //
+    // Test2 //
     public class AccountController : ControllerBase
     {
         private readonly IAccountManager _accountManager;
