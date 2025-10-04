@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e8vfhFhQRUI=",
+  "dgSpecHash": "K7lvGpX0Z+E=",
   "success": true,
-  "projectFilePath": "H:\\EzzEldine\\Computer Science\\C# projects\\E-Commerce\\E-Commerce\\E-Commerce.csproj",
+  "projectFilePath": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\E-Commerce.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ezz Sabek\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Ezz Sabek\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
