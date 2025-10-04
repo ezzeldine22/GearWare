@@ -7,7 +7,7 @@ public partial class Order
 {
     public int OrderId { get; set; }
 
-    public int UserId { get; set; }
+    public string UserId { get; set; }
 
     public DateTime OrderDateUtc { get; set; }
 

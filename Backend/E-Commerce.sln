@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36301.6
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Commerce", "E-Commerce\E-Commerce.csproj", "{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "E-Commerce\API.csproj", "{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{CB9AB045-D29E-4174-9928-A472CA6CBD51}"
 EndProject

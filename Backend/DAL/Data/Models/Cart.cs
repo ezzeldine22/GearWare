@@ -7,7 +7,7 @@ public partial class Cart
 {
     public int CartId { get; set; }
 
-    public int UserId { get; set; }
+    public string UserId { get; set; }
 
     public DateTime CreatedAtUtc { get; set; }
 
