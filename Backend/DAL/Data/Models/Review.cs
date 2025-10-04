@@ -11,7 +11,7 @@ public partial class Review
 
     public int ProductId { get; set; }
 
-    public byte Rating { get; set; }
+    public float Rating { get; set; }
 
     public string? Comment { get; set; }
 

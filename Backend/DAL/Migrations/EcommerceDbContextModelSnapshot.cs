@@ -113,6 +113,10 @@ namespace DAL.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -325,6 +329,28 @@ namespace DAL.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("DAL.Data.Models.ProductImage", b =>
+                {
+                    b.Property<int>("ProductImageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductImageId"));
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductImageId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductImage");
+                });
+
             modelBuilder.Entity("DAL.Data.Models.Review", b =>
                 {
                     b.Property<int>("ReviewId")
@@ -351,8 +377,8 @@ namespace DAL.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
-                    b.Property<byte>("Rating")
-                        .HasColumnType("tinyint");
+                    b.Property<float>("Rating")
+                        .HasColumnType("real");
 
                     b.Property<byte[]>("RowVersion")
                         .IsConcurrencyToken()
@@ -399,7 +425,6 @@ namespace DAL.Migrations
                         .HasDefaultValueSql("(sysutcdatetime())");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
@@ -472,7 +497,8 @@ namespace DAL.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.HasIndex(new[] { "Email" }, "UQ__Users__A9D10534A281DF16")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[Email] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });
@@ -540,20 +566,6 @@ namespace DAL.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "1",
-                            Name = "Admin",
-                            NormalizedName = "ADMIN"
-                        },
-                        new
-                        {
-                            Id = "2",
-                            Name = "Client",
-                            NormalizedName = "CLIENT"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -749,6 +761,17 @@ namespace DAL.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("DAL.Data.Models.ProductImage", b =>
+                {
+                    b.HasOne("DAL.Data.Models.Product", "Product")
+                        .WithMany("Images")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("DAL.Data.Models.Review", b =>
                 {
                     b.HasOne("DAL.Data.Models.Product", "Product")
@@ -862,6 +885,8 @@ namespace DAL.Migrations
             modelBuilder.Entity("DAL.Data.Models.Product", b =>
                 {
                     b.Navigation("CartItems");
+
+                    b.Navigation("Images");
 
                     b.Navigation("OrderItems");
 

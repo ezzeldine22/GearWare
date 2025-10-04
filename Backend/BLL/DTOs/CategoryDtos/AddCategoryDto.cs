@@ -11,7 +11,11 @@ namespace BLL.DTOs.CategoryDtos
     {
         [Required(ErrorMessage = "This is A Required Field")]
         public string categoryName { get; set; }
+
         [Required(ErrorMessage = "This is A Required Field")]
         public string categoryDescription { get; set; }
+
+        [Required(ErrorMessage = "This is A Required Field")]
+        public string imgUrl { get; set; }
     }
 }

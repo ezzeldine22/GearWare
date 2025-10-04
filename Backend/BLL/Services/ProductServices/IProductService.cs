@@ -1,4 +1,5 @@
 ﻿using BLL.DTOs.ProductDtos;
+using DAL.Data;
 using DAL.Data.Models;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace BLL.Services.ProductServices
         Task EditProductAsync(EditProductDto editProductDto);
         Task<GetProductByIdDto> GetProductByIdAsync(int Id);
         IEnumerable<GetAllProductsDto> GetAllProducts();
+       
+        Task<IEnumerable<GetAllProductsDto>> SearchProductsPagedAsync( string query,int pageNumber, ProductSortBy sortBy = ProductSortBy.Latest);
 
     }
 }

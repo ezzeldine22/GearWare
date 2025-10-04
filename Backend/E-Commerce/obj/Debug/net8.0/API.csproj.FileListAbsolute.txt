@@ -69,7 +69,6 @@ H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\obj
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets.build.json.cache
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets.development.json
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\API.csproj.Up2Date
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\API.dll
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\refint\API.dll
@@ -157,3 +156,9 @@ F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\API.genruntimeconfig.cache
 F:\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\ref\API.dll
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Facebook.dll
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Google.dll
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\API.staticwebassets.runtime.json

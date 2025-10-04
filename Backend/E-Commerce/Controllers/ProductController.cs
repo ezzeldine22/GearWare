@@ -1,12 +1,15 @@
 ﻿using BLL.DTOs.ProductDtos;
 using BLL.Exceptions;
 using BLL.Services.ProductServices;
+using DAL.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_Commerce.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+  
     public class ProductController : ControllerBase
     {
 
@@ -20,6 +23,8 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("")]
+       
+
         public ActionResult<IEnumerable<GetAllProductsDto>> GetAllProducts()
         {
             try
@@ -34,8 +39,8 @@ namespace E_Commerce.Controllers
         }
         
         [HttpPost("")]
-        
-        public async Task<ActionResult> AddProduct(AddProductDto _addProductDto)
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult> AddProduct([FromForm] AddProductDto _addProductDto)
         {
             if (!ModelState.IsValid)
             {
@@ -57,6 +62,7 @@ namespace E_Commerce.Controllers
 
 
         [HttpDelete("{Id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> DeleteProduct(int Id)
         {
             await productService.DeleteProductAsync(Id);
@@ -64,17 +70,38 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("{Id}")]
-        public async Task<ActionResult> GetById(int Id)
+    
+        public async Task<ActionResult<GetProductByIdDto>> GetById(int Id)
         {
             var product = await productService.GetProductByIdAsync(Id);
             return Ok(product);
         }
 
         [HttpPut("")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult> EditProduct(EditProductDto editProductDto)
         {
             await productService.EditProductAsync(editProductDto);
             return Ok();
+        }
+
+        [HttpGet("search")]
+       
+        public async Task<ActionResult<IEnumerable<GetAllProductsDto>>> Search(string query, int pageNumber = 1 , ProductSortBy sortBy = ProductSortBy.Latest)
+        {
+            try
+            {
+                var result = await productService.SearchProductsPagedAsync(query, pageNumber,sortBy);
+                return Ok(result);
+            }
+            catch (CustomException ex)
+            {
+                return BadRequest(new
+                {
+                    ex.Errors
+                });
+            }
+
         }
     }
 }

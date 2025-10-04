@@ -1,4 +1,5 @@
 ﻿using DAL.Data.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,10 +22,9 @@ namespace BLL.DTOs.ProductDtos
         public int ProductStockQuantity { get; set; }
         [Required(ErrorMessage = "This is A Required Field")]
         public string  ProductCategoryName { get; set; }
+        [Required(ErrorMessage = "Please upload an image")]
+        public IFormFile ImageFile { get; set; } 
 
-
-
-        
 
     }
 }

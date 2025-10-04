@@ -1,5 +1,6 @@
 ﻿using BLL.DTOs.OrderDtos;
 using BLL.Services.OrderService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_Commerce.Controllers
@@ -16,10 +17,19 @@ namespace E_Commerce.Controllers
         }
 
         [HttpGet("Get Order Items")]
-        public ActionResult<IEnumerable<GetAllOrderItemsDto>> GetAllOrderItems()
+
+        public ActionResult<IEnumerable<GetAllOrderItemsDto>> GetAllOrderItems(int orderId)
         {
-            var AllOrderItems = _orderService.GetAllOrderItems();
+            var AllOrderItems = _orderService.GetAllOrderItems(orderId);
             return Ok(AllOrderItems);
+        }
+
+        [HttpGet("Get AllOrders")]
+     
+        public ActionResult<IEnumerable<GetAllOrdersDto>> GetAllOrders(string ClientId)
+        {
+            var AllOrders = _orderService.GetAllOrders(ClientId);
+            return Ok(AllOrders);
         }
     }
 }

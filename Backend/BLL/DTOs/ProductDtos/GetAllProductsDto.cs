@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace BLL.DTOs.ProductDtos
        
         public decimal ProductPrice { get; set; }
 
+        public IEnumerable<string> Images { get; set; }
         public int ProductStockQuantity { get; set; }
     
     }

@@ -45,9 +45,9 @@ namespace BLL.Services.CartServices
 
         }
 
-        public  IEnumerable<GetAllCartItemsDto> GetAllCartItems()
+        public  IEnumerable<GetAllCartItemsDto> GetAllCartItems(int CartId)
         {
-            var AllCartItems = _cartItemRepo.ReadAll();
+            var AllCartItems = _cartItemRepo.ReadAll().Where(ci=>ci.CartId == CartId);
 
             if (AllCartItems == null)
             {
