@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\e-commerce\\wwwroot\\images\\products\\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|solutionrelative:e-commerce\\wwwroot\\images\\products\\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+      "AbsoluteMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\e-commerce\\wwwroot\\images\\products\\8c67cac7-62d4-4ed8-88da-a4e7d31c5064.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|solutionrelative:e-commerce\\wwwroot\\images\\products\\8c67cac7-62d4-4ed8-88da-a4e7d31c5064.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,13 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\wwwroot\\images\\products\\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg",
-              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\images\\products\\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\wwwroot\\images\\products\\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg",
-              "RelativeToolTip": "E-Commerce\\wwwroot\\images\\products\\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg",
+              "Title": "8c67cac7-62d4-4ed8-88da-a4e7d31c5064.jpg - Bitmap [319x161, 24 bit, JPG]",
+              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\wwwroot\\images\\products\\8c67cac7-62d4-4ed8-88da-a4e7d31c5064.jpg",
+              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\images\\products\\8c67cac7-62d4-4ed8-88da-a4e7d31c5064.jpg",
+              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\wwwroot\\images\\products\\8c67cac7-62d4-4ed8-88da-a4e7d31c5064.jpg - Bitmap [319x161, 24 bit, JPG]",
+              "RelativeToolTip": "E-Commerce\\wwwroot\\images\\products\\8c67cac7-62d4-4ed8-88da-a4e7d31c5064.jpg - Bitmap [319x161, 24 bit, JPG]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2025-10-04T14:14:23.085Z"
+              "WhenOpened": "2025-10-04T14:16:17.4Z",
+              "EditorCaption": " - Bitmap [319x161, 24 bit, JPG]"
             }
           ]
         }
