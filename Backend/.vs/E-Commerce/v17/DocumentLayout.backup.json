@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\e-commerce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|solutionrelative:e-commerce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\e-commerce\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|solutionrelative:e-commerce\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\bll\\services\\accountmanager\\iaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|solutionrelative:bll\\services\\accountmanager\\iaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\bll\\services\\accountmanager\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB9AB045-D29E-4174-9928-A472CA6CBD51}|BLL\\BLL.csproj|solutionrelative:bll\\services\\accountmanager\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|h:\\ezzeldine\\technology\\repos\\e-commerce clone\\e-commerce\\backend\\e-commerce\\wwwroot\\images\\products\\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{F9FC39B2-F437-4E0E-95FD-07B7A2F69C00}|E-Commerce\\API.csproj|solutionrelative:e-commerce\\wwwroot\\images\\products\\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 771,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\Program.cs",
-              "RelativeDocumentMoniker": "E-Commerce\\Program.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\Program.cs",
-              "RelativeToolTip": "E-Commerce\\Program.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAQwDMAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T19:11:38.073Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -51,42 +26,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "E-Commerce\\Controllers\\AccountController.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\Controllers\\AccountController.cs*",
-              "RelativeToolTip": "E-Commerce\\Controllers\\AccountController.cs*",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwBwAAACcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T18:40:12.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountManager.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\AccountManager\\AccountManager.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\AccountManager\\AccountManager.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\AccountManager\\AccountManager.cs",
-              "RelativeToolTip": "BLL\\Services\\AccountManager\\AccountManager.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAA5wJ0AAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T18:39:16.246Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAccountManager.cs",
-              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\AccountManager\\IAccountManager.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\AccountManager\\IAccountManager.cs",
-              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\Services\\AccountManager\\IAccountManager.cs",
-              "RelativeToolTip": "BLL\\Services\\AccountManager\\IAccountManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-01T18:38:18.319Z",
-              "EditorCaption": ""
+              "DocumentIndex": 0,
+              "Title": "ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg",
+              "DocumentMoniker": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\wwwroot\\images\\products\\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg",
+              "RelativeDocumentMoniker": "E-Commerce\\wwwroot\\images\\products\\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg",
+              "ToolTip": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\wwwroot\\images\\products\\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg",
+              "RelativeToolTip": "E-Commerce\\wwwroot\\images\\products\\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-10-04T14:14:23.085Z"
             }
           ]
         }

@@ -40,7 +40,7 @@ namespace E_Commerce.Controllers
         
         [HttpPost("")]
         [Authorize(Roles = "Admin")]
-        public async Task<ActionResult> AddProduct(AddProductDto _addProductDto)
+        public async Task<ActionResult> AddProduct([FromForm] AddProductDto _addProductDto)
         {
             if (!ModelState.IsValid)
             {

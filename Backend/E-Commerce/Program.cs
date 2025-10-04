@@ -226,6 +226,7 @@ namespace E_Commerce
            
             app.UseCors("AllowAll");
 
+            app.UseStaticFiles();
             app.UseAuthentication();
             app.UseAuthorization();
 

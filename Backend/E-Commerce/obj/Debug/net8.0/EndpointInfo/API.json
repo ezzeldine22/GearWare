@@ -548,19 +548,60 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/AddProductDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddProductDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddProductDto"
+                "required": [
+                  "ImageFile",
+                  "ProductCategoryName",
+                  "ProductDescription",
+                  "ProductName",
+                  "ProductPrice",
+                  "ProductStockQuantity"
+                ],
+                "type": "object",
+                "properties": {
+                  "ProductName": {
+                    "type": "string"
+                  },
+                  "ProductDescription": {
+                    "type": "string"
+                  },
+                  "ProductPrice": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "ProductStockQuantity": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "ProductCategoryName": {
+                    "type": "string"
+                  },
+                  "ImageFile": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "ProductName": {
+                  "style": "form"
+                },
+                "ProductDescription": {
+                  "style": "form"
+                },
+                "ProductPrice": {
+                  "style": "form"
+                },
+                "ProductStockQuantity": {
+                  "style": "form"
+                },
+                "ProductCategoryName": {
+                  "style": "form"
+                },
+                "ImageFile": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -912,44 +953,6 @@
             "type": "string"
           },
           "imgUrl": {
-            "minLength": 1,
-            "type": "string"
-          }
-        },
-        "additionalProperties": false
-      },
-      "AddProductDto": {
-        "required": [
-          "imageurl",
-          "productCategoryName",
-          "productDescription",
-          "productName",
-          "productPrice",
-          "productStockQuantity"
-        ],
-        "type": "object",
-        "properties": {
-          "productName": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "productDescription": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "productPrice": {
-            "type": "number",
-            "format": "double"
-          },
-          "productStockQuantity": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "productCategoryName": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "imageurl": {
             "minLength": 1,
             "type": "string"
           }

@@ -161,3 +161,4 @@ F:\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Facebook.dll
 H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Google.dll
+H:\EzzEldine\Technology\repos\E-commerce clone\E-Commerce\Backend\E-Commerce\bin\Debug\net8.0\API.staticwebassets.runtime.json

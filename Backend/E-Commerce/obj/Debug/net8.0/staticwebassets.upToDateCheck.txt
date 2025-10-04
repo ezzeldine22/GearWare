@@ -1,0 +1,4 @@
+wwwroot\images\products\2e547e84-1bb8-4f7a-ab34-18a8f08656fa.jpg
+wwwroot\images\products\525c5c3c-4a8a-4ab7-b416-23661e25b98b.webp
+wwwroot\images\products\6ada7d0e-cf6d-4368-8093-e3f3a08f559e.webp
+wwwroot\images\products\ff5c2d32-2ee1-4ea0-bd43-2b0c00836d02.jpeg

@@ -30,35 +30,49 @@ namespace BLL.Services.ProductServices
 
         public async Task AddProductAsync(AddProductDto _addProductDto)
         {
-            var ProductCheck = await _ProductRepo.FirstOrDefaultAsync(e => e.Name == _addProductDto.ProductName);
-
-
-            if (ProductCheck != null)
-            {
+            var productCheck = await _ProductRepo.FirstOrDefaultAsync(e => e.Name == _addProductDto.ProductName);
+            if (productCheck != null)
                 throw new CustomException(new List<string> { "The Product Already Exists !!!" });
+
+            var category = await _categoryRepo.FirstOrDefaultAsync(c => c.Name == _addProductDto.ProductCategoryName);
+            if (category == null)
+                throw new CustomException(new List<string> { "Category Not Found" });
+
+            string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "products");
+            if (!Directory.Exists(uploadsFolder))
+                Directory.CreateDirectory(uploadsFolder);
+
+            string uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(_addProductDto.ImageFile.FileName);
+            string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+            using (var fileStream = new FileStream(filePath, FileMode.Create))
+            {
+                await _addProductDto.ImageFile.CopyToAsync(fileStream);
             }
 
-            var AddedProductCategory = (await _categoryRepo.FirstOrDefaultAsync(c => c.Name == _addProductDto.ProductCategoryName));
+          
+            string imageUrl = $"/images/products/{uniqueFileName}";
 
-            var AddedProduct = new Product
+            var addedProduct = new Product
             {
                 Name = _addProductDto.ProductName,
                 Price = _addProductDto.ProductPrice,
                 Description = _addProductDto.ProductDescription,
                 StockQuantity = _addProductDto.ProductStockQuantity,
-                CategoryId = AddedProductCategory.CategoryId,
-            
+                CategoryId = category.CategoryId,
+                CreatedAtUtc = DateTime.UtcNow
             };
 
-            await _ProductRepo.AddAsync(AddedProduct);
+            await _ProductRepo.AddAsync(addedProduct);
 
-            var ProductImage = new ProductImage
+        
+            var productImage = new ProductImage
             {
-                ImageUrl = _addProductDto.Imageurl,
-                Product = AddedProduct,
+                ImageUrl = imageUrl,
+                Product = addedProduct
             };
 
-            await _poductImageRepo.AddAsync(ProductImage);
+            await _poductImageRepo.AddAsync(productImage);
             _ProductRepo.SaveChanges();
 
         }
