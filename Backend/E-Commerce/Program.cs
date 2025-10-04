@@ -1,11 +1,5 @@
-using BLL.DTOs.ProductDtos;
-using BLL.Services.CategoryService;
-using BLL.Services.CategoryService.CategoryService;
-using BLL.Services.ProductServices;
-using CleanArchitecture.Core.Interfaces;
-using CleanArchitecture.Infrastructure.Persistence;
-using DAL.Data;
-using DAL.Data.Models;
+
+using E_Commerce.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace E_Commerce
@@ -22,23 +16,8 @@ namespace E_Commerce
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddDbContext<EcommerceDbContext>(builder => builder.UseSqlServer("Server=.;Database=ECommerceDB;Trusted_Connection=True;TrustServerCertificate=True;"));
 
-
-
-            builder.Services.AddDbContext<EcommerceDbContext>(Option =>
-            Option.UseSqlServer(builder.Configuration.GetConnectionString("EDB"))
-            );
-
-            //builder.Services.AddDbContext<EcommerceDbContext>(Option =>
-            //Option.UseSqlServer("Server=.;Database=ECommerceDB;Trusted_Connection=True;TrustServerCertificate=True;"));
-
-
-
-            builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            builder.Services.AddScoped<IProductService, ProductService>();
-            builder.Services.AddScoped<ICategoryServices, CategoryServices>();
-            //builder.Services.AddScoped<GetAllProductsDto>();
-            //builder.Services.AddScoped<AddProductDto>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
