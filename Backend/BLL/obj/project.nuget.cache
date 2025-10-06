@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "28nYwiDumZI=",
+  "dgSpecHash": "TAjv3Bhlnes=",
   "success": true,
-  "projectFilePath": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\BLL\\BLL.csproj",
+  "projectFilePath": "H:\\EzzEldine\\Technology\\GearWare\\Backend\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ezz Sabek\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Ezz Sabek\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
