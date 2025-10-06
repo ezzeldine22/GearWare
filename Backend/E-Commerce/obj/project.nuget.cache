@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hoAXOkajaHg=",
+  "dgSpecHash": "eljkQW+dY/o=",
   "success": true,
-  "projectFilePath": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\API.csproj",
+  "projectFilePath": "H:\\EzzEldine\\Technology\\GearWare\\Backend\\E-Commerce\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ezz Sabek\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Ezz Sabek\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -75,9 +75,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "Package 'System.IdentityModel.Tokens.Jwt' 7.0.3 has a known moderate severity vulnerability, https://github.com/advisories/GHSA-59j7-ghrg-fj52",
-      "projectPath": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\API.csproj",
+      "projectPath": "H:\\EzzEldine\\Technology\\GearWare\\Backend\\E-Commerce\\API.csproj",
       "warningLevel": 1,
-      "filePath": "H:\\EzzEldine\\Technology\\repos\\E-commerce clone\\E-Commerce\\Backend\\E-Commerce\\API.csproj",
+      "filePath": "H:\\EzzEldine\\Technology\\GearWare\\Backend\\E-Commerce\\API.csproj",
       "libraryId": "System.IdentityModel.Tokens.Jwt",
       "targetGraphs": [
         "net8.0"
