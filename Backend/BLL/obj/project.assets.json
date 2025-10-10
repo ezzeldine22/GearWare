@@ -2936,11 +2936,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\EzzEldine\\Technology\\GearWare\\Backend\\BLL\\BLL.csproj",
+      "projectUniqueName": "H:\\EzzEldine\\Technology\\New folder\\GearWare\\Backend\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "H:\\EzzEldine\\Technology\\GearWare\\Backend\\BLL\\BLL.csproj",
+      "projectPath": "H:\\EzzEldine\\Technology\\New folder\\GearWare\\Backend\\BLL\\BLL.csproj",
       "packagesPath": "C:\\Users\\Ezz Sabek\\.nuget\\packages\\",
-      "outputPath": "H:\\EzzEldine\\Technology\\GearWare\\Backend\\BLL\\obj\\",
+      "outputPath": "H:\\EzzEldine\\Technology\\New folder\\GearWare\\Backend\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2961,8 +2961,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "H:\\EzzEldine\\Technology\\GearWare\\Backend\\DAL\\DAL.csproj": {
-              "projectPath": "H:\\EzzEldine\\Technology\\GearWare\\Backend\\DAL\\DAL.csproj"
+            "H:\\EzzEldine\\Technology\\New folder\\GearWare\\Backend\\DAL\\DAL.csproj": {
+              "projectPath": "H:\\EzzEldine\\Technology\\New folder\\GearWare\\Backend\\DAL\\DAL.csproj"
             }
           }
         }
@@ -3004,7 +3004,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

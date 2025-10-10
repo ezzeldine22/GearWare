@@ -172,6 +172,7 @@ namespace BLL.Services.ProductServices
             var ProductQuery = _ProductRepo.ReadAll()
                 .Include(p => p.Category)
                 .Include(p => p.Reviews) 
+                .Include(p=>p.Images)
                 .Where(p =>
                     EF.Functions.Like(p.Name, $"{EnhancedQuery}%") ||
                     EF.Functions.Like(p.Description, $"%{EnhancedQuery}%") ||
