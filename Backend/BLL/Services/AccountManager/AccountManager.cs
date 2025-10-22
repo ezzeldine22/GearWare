@@ -98,6 +98,7 @@ namespace BLL.Managers.AccountManager
                 email = user.Email,
                 Name = user.Name,
                 roles = role,
+                Id = user.Id,
             };
         }
         public async Task<string> Register(RegisterDto registerDto)

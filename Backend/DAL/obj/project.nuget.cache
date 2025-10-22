@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Iar47gIzba0=",
+  "dgSpecHash": "+a2834+AvnQ=",
   "success": true,
-  "projectFilePath": "H:\\EzzEldine\\Technology\\New folder\\GearWare\\Backend\\DAL\\DAL.csproj",
+  "projectFilePath": "H:\\EzzEldine\\GearWare\\Backend\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ezz Sabek\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Ezz Sabek\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
